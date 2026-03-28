@@ -4,8 +4,6 @@ This repository documents an experiment using **Claude Sonnet 4.6** (via AWS Bed
 
 The camera provides local visual context, but the system prompt relies more heavily on the numeric state — particularly heading delta and track progress — than on image interpretation. The reliable navigation behaviours observed in the experiments are rooted in the structured data, not in visual reasoning.
 
-> **The code has moved.** The agent implementation was contributed upstream to the [deepracer-community/deepracer-simapp](https://github.com/aws-deepracer-community/deepracer-simapp/pull/221) project. This repository now exists solely to preserve the experiment outputs, raw traces, configuration, and analysis.
-
 ---
 
 ## Experiment Summary
@@ -42,7 +40,7 @@ Two earlier runs (52 and 40 steps respectively) were aborted during debugging an
 2. **The primary limitation is latency, not accuracy.** At ~17 s/step the approach cannot run in real time; it is only feasible with a simulator that pauses during inference.
 3. **Navigation quality improves with prompt iteration.** Run 3's clean lap (0 off-track events) vs. runs 1 and 2 suggests that system prompt quality matters significantly.
 4. **The LLM's image-based and parameter-based reasoning can disagree.** The model sometimes narrates the wrong turn direction from the camera while simultaneously issuing a correct steering command based on the heading delta. The numeric params win in practice, but the disagreement reveals a real tension between visual and structured-data reasoning.
-5. **A context window of 2 frames is sufficient** for temporal continuity on this track.
+5. **A single image is sufficient** for moment-to-moment decisions; temporal continuity comes from including the previous assistant response in the prompt, not from a second image.
 
 ### What the agent does well
 

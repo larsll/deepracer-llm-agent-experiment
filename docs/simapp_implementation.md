@@ -52,7 +52,7 @@ At each step the agent:
 
 1. Captures a front-facing camera image from the simulator (colour, not grayscale)
 2. Reads the full `reward_params` dict from `RolloutCtrl` — position, heading, progress, closest waypoints, `all_wheels_on_track`, speed, and more
-3. Encodes the image as base64 and builds a Bedrock message containing: the system prompt, the action space bounds, up to N previous turn pairs (context window = 2), the repeated step prompt, the `reward_params` as a `"Current state information:"` JSON block, and the image
+3. Encodes the image as base64 and builds a Bedrock message containing: the system prompt, the action space bounds, up to N previous assistant responses (context window = 2 prior turns, text only — images from prior steps are not retained), the repeated step prompt, the `reward_params` as a `"Current state information:"` JSON block, and the current image
 4. Calls Claude Sonnet 4.6 via Bedrock and parses the JSON response for `steering_angle` and `speed`
 5. Injects the action back into the DeepRacer simulator
 

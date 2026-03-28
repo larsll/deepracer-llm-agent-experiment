@@ -54,7 +54,7 @@ This is evident in the trace data. The reliable behaviours described below — s
 
 - **Straight-line tracking** is consistently excellent. On long straights the LLM reads near-zero heading deltas and commands 0° steer, keeping distance from center under 1–2 cm. This is driven by the numeric delta, not image interpretation.
 - **Smooth turn entry**: the LLM correctly ramps steering up as the track-heading delta increases, and unwinds it as the delta decreases on exit.
-- **Context window use**: the 2-image rolling context allows the agent to notice it is "still turning" without re-deriving that fact from scratch at each step.
+- **Temporal context from prior responses**: each step includes the previous assistant response alongside the current image. This allows the agent to notice it is "still turning" without re-deriving that fact from scratch — continuity comes from the retained text, not from a second image.
 - **Self-correction**: occasional steering errors are quietly corrected within a few steps without going off-track (especially clear in run 3).
 
 ### Weaknesses
@@ -84,7 +84,7 @@ Token cost data is embedded in each `*_response.json` trace file. A rough estima
 2. **The camera and the heading parameter can give conflicting directional signals.** In observed cases the model resolves them in favour of the numeric data — issuing the correct steering command even while its image-based narrative describes the wrong turn direction. This confirms that the camera is not a reliable source of directional truth and that a camera-only configuration would likely fail.
 3. **The primary limitation is latency**, not accuracy. At ~17 s/step the approach cannot run in real time; it is only feasible with a simulator that pauses during inference.
 4. **Navigation quality improves with prompt iteration**: run 3's zero off-track result vs. runs 1–2 suggests that system prompt quality matters significantly.
-5. **A context window of 2 is sufficient** for temporal continuity on this track; wider context was not needed to complete any lap.
+5. **A single image per step is sufficient**; temporal continuity is provided by retaining the previous assistant response in the prompt, not by passing multiple images.
 
 ---
 
