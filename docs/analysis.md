@@ -1,5 +1,7 @@
 # Experiment Analysis: LLM Agent for AWS DeepRacer
 
+> Key findings from this analysis are summarised in the [README](../README.md). This document covers the full quantitative breakdown.
+
 ## Overview
 
 This document analyses the three completed evaluation runs from the DeepRacer LLM agent experiment (March 26–27, 2026). The agent used **Claude Sonnet 4.6** via AWS Bedrock (eu-central-1) to drive the re:Invent 2018 base loop track in continuous action space mode.
@@ -42,16 +44,22 @@ Latency spikes are clearly API latency outliers — the lap story for run 3 note
 
 ## Navigation Quality
 
+### Camera vs. numeric state
+
+The agent receives two kinds of input at every step: a colour camera image and a structured JSON block containing x/y position, heading, track progress, distance from centre, closest waypoints, `all_wheels_on_track`, and speed. The system prompt was developed with the expectation that the numeric state would carry most of the navigational load; the camera provides local visual context but is not relied upon for precise directional decisions.
+
+This is evident in the trace data. The reliable behaviours described below — straight-line tracking, smooth turn entry — correlate tightly with the heading delta parameter, not with image content. The failure modes in Weaknesses involve cases where the model's visual interpretation conflicts with the numeric heading; in all observed cases the numeric state wins. The camera's main contribution appears to be helping the model assess whether the track is curving ahead and confirming on-track status — tasks that do not require precise bearing — rather than providing directional guidance.
+
 ### Strengths
 
-- **Straight-line tracking** is consistently excellent. On long straights the LLM reads near-zero deltas and commands 0° steer, keeping distance from center under 1–2 cm.
+- **Straight-line tracking** is consistently excellent. On long straights the LLM reads near-zero heading deltas and commands 0° steer, keeping distance from center under 1–2 cm. This is driven by the numeric delta, not image interpretation.
 - **Smooth turn entry**: the LLM correctly ramps steering up as the track-heading delta increases, and unwinds it as the delta decreases on exit.
 - **Context window use**: the 2-image rolling context allows the agent to notice it is "still turning" without re-deriving that fact from scratch at each step.
 - **Self-correction**: occasional steering errors are quietly corrected within a few steps without going off-track (especially clear in run 3).
 
 ### Weaknesses
 
-- **Compass / direction reasoning errors**: the lap story for run 3 documents an instance at step 30 where the LLM wrote "big right curve" in its internal knowledge while actively steering left through a left-hand bend. The error was harmless because the LLM correctly followed the delta signal rather than its own written note. However, it demonstrates unreliable spatial reasoning about absolute bearing.
+- **Camera-derived direction reasoning disagrees with the heading parameter**: the lap story for run 3 documents an instance at step 30 where the LLM wrote "big right curve" in its internal reasoning while actively steering left through a left-hand bend. The heading delta clearly indicated a left turn; the camera image apparently suggested otherwise. The correct action was issued — the structured parameter overrode the image interpretation — but the disagreement is a meaningful signal. The camera alone cannot be trusted for directional reasoning; the model's visual narrative of where the track goes frequently does not match the calculated bearing. This is not a problem when the numeric state is available and authoritative, but it would rule out a camera-only configuration entirely.
 - **Off-track events on sharper curves** (runs 1 and 2): the reinvent_base track has two 180° hairpins. Runs 1 and 2 had off-track events at these points; run 3 cleared them cleanly, suggesting the system prompt refinements between runs improved handling of maximum-curvature sections.
 - **No speed modulation on most straights**: all runs consistently drove at 1.5 m/s regardless of available track width or upcoming turn geometry. The action space allows up to 3 m/s; the agent almost never used it.
 
@@ -72,10 +80,10 @@ Token cost data is embedded in each `*_response.json` trace file. A rough estima
 
 ## Key Conclusions
 
-1. **A general-purpose vision-language model can drive the DeepRacer track** without any task-specific fine-tuning, using only a well-crafted system prompt and the rolling camera feed.
-2. **The primary limitation is latency**, not accuracy. At ~17 s/step the approach cannot run in real time; it is only feasible with a simulator that pauses during inference.
-3. **Navigation quality improves with prompt iteration**: run 3's zero off-track result vs. runs 1–2 suggests that system prompt quality matters significantly.
-4. **Spatial reasoning remains the weak point**: the LLM can reliably follow the local delta signal (turn when the track curves) but has trouble with global bearing and compass direction reasoning.
+1. **A general-purpose vision-language model can drive the DeepRacer track** without task-specific fine-tuning — but the camera feed alone is not sufficient. Reliable navigation requires explicit numeric state (x/y, heading, progress) injected into every prompt alongside the image.
+2. **The camera and the heading parameter can give conflicting directional signals.** In observed cases the model resolves them in favour of the numeric data — issuing the correct steering command even while its image-based narrative describes the wrong turn direction. This confirms that the camera is not a reliable source of directional truth and that a camera-only configuration would likely fail.
+3. **The primary limitation is latency**, not accuracy. At ~17 s/step the approach cannot run in real time; it is only feasible with a simulator that pauses during inference.
+4. **Navigation quality improves with prompt iteration**: run 3's zero off-track result vs. runs 1–2 suggests that system prompt quality matters significantly.
 5. **A context window of 2 is sufficient** for temporal continuity on this track; wider context was not needed to complete any lap.
 
 ---
