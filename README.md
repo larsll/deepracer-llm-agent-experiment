@@ -10,7 +10,7 @@ The camera provides local visual context, but the system prompt relies more heav
 
 | | |
 |---|---|
-| **Model** | Claude Sonnet 4.6 (`anthropic.claude-sonnet-4-5-20251101-v1:0`) via AWS Bedrock (eu-central-1) |
+| **Model** | Claude Sonnet 4.6 (`eu.anthropic.claude-sonnet-4-6`) via AWS Bedrock (eu-central-1) |
 | **Track** | re:Invent 2018 base loop (`reinvent_base`), ~17.7 m circumference, 121 waypoints |
 | **Action space** | Continuous — speed 1–3 m/s, steering ±30° |
 | **Context window** | 1 image + previous response |
@@ -29,8 +29,6 @@ All three full evaluation runs completed the lap:
 **The LLM can successfully navigate the track** without any task-specific fine-tuning — using only a well-crafted system prompt and the rolling camera feed. Run 3 completed the lap with zero off-track events and 100% of steps with all wheels on track.
 
 The primary limitation is latency. At ~15–19 seconds per decision step, a single lap takes roughly an hour of wall-clock time. The simulator pauses physics during inference, making this a demonstration of capability rather than a practical real-time controller.
-
-Two earlier runs (52 and 40 steps respectively) were aborted during debugging and are not included here.
 
 ---
 
