@@ -13,7 +13,7 @@ This repository documents an experiment using **Claude Sonnet 4.6** (via AWS Bed
 | **Model** | Claude Sonnet 4.6 (`anthropic.claude-sonnet-4-5-20251101-v1:0`) via AWS Bedrock (eu-central-1) |
 | **Track** | re:Invent 2018 base loop (`reinvent_base`), ~17.7 m circumference, 121 waypoints |
 | **Action space** | Continuous — speed 1–3 m/s, steering ±30° |
-| **Context window** | 2 images (rolling) |
+| **Context window** | 1 image + previous response |
 | **Experiment date** | March 26–27, 2026 |
 
 ### Results
