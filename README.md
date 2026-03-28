@@ -12,7 +12,7 @@ The camera provides local visual context, but the system prompt relies more heav
 |---|---|
 | **Model** | Claude Sonnet 4.6 (`eu.anthropic.claude-sonnet-4-6`) via AWS Bedrock (eu-central-1) |
 | **Track** | re:Invent 2018 base loop (`reinvent_base`), ~17.7 m circumference, 121 waypoints |
-| **Action space** | Continuous — speed 1–3 m/s, steering ±30° |
+| **Action space** | Continuous — speed 0.75–1.5 m/s, steering ±25° |
 | **Context window** | 1 image + previous response |
 | **Experiment date** | March 26–27, 2026 |
 
