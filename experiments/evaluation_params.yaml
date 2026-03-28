@@ -1,0 +1,43 @@
+---
+'AWS_REGION': 'eu-central-1'
+'BODY_SHELL_TYPE':
+- 'deepracer'
+'CAMERA_MAIN_ENABLE': 'True'
+'CAMERA_SUB_ENABLE': 'False'
+'CAR_COLOR':
+- 'Red'
+'COLLISION_PENALTY': '5.0'
+'DISPLAY_NAME':
+- 'Claude'
+'ENABLE_DOMAIN_RANDOMIZATION': 'False'
+'ENABLE_EXTRA_KVS_OVERLAY': 'True'
+'EVAL_CHECKPOINT': 'best'
+'IS_CONTINUOUS': 'False'
+'JOB_TYPE': 'EVALUATION'
+'KINESIS_VIDEO_STREAM_NAME': ''
+'METRICS_S3_BUCKET':
+- 'larsll-deepracer-eu-4'
+'METRICS_S3_OBJECT_KEY':
+- 'LLM-Test-Model-1/metrics/evaluation/evaluation-20260326222546.json'
+'MODEL_S3_BUCKET':
+- 'larsll-deepracer-eu-4'
+'MODEL_S3_PREFIX':
+- 'LLM-Test-Model-1'
+'MP4_S3_BUCKET':
+- 'larsll-deepracer-eu-4'
+'MP4_S3_OBJECT_PREFIX':
+- 'LLM-Test-Model-1/mp4'
+'NUMBER_OF_RESETS': '10'
+'NUMBER_OF_TRIALS': '1'
+'OFF_TRACK_PENALTY': '0.2'
+'RACER_NAME':
+- 'Claude'
+'RACE_TYPE': 'TIME_TRIAL'
+'RESET_BEHIND_DIST': '2.0'
+'REVERSE_DIR': 'False'
+'ROBOMAKER_SIMULATION_JOB_ACCOUNT_ID': 'Dummy'
+'SIMTRACE_S3_BUCKET':
+- 'larsll-deepracer-eu-4'
+'SIMTRACE_S3_PREFIX':
+- 'LLM-Test-Model-1/evaluation-20260326222546'
+'WORLD_NAME': 'reinvent_base'
