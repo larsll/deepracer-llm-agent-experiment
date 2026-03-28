@@ -32,8 +32,6 @@ All three full evaluation runs completed the lap:
 
 The primary limitation is latency. At ~15–19 seconds per decision step, a single lap takes roughly an hour of wall-clock time. The simulator pauses physics during inference, making this a demonstration of capability rather than a practical real-time controller.
 
-Two earlier runs (52 and 40 steps respectively) were aborted during debugging and are not included here.
-
 ---
 
 ## Key Findings
