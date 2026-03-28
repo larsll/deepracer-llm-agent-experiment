@@ -72,7 +72,7 @@ experiments/
 
   run_1/                         # 2026-03-26, 219 steps — 2 off-track events
     config/model_metadata.json
-    traces/                      # Raw LLM traces (*_img.jpg, *_request.json, *_response.json, *_action.json)
+    traces/                      # Raw LLM traces (request, response, image)
     outputs/
       simtrace.csv
       mp4/
