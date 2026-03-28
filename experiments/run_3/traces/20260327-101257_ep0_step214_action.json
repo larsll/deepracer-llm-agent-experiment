@@ -1,0 +1,45 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Car is left of center on the straight with heading 28.5\u00b0 while the waypoint bearing is -18.8\u00b0, giving delta=-47.3\u00b0, requiring strong right correction to align with the eastward track.",
+    "knowledge": [
+      "Track total 121 waypoints, ~17.7m length.",
+      "WP0-20: long straight along y\u22480.683 heading east (~0\u00b0).",
+      "WP24-44: left curve from east to west, requires sustained positive steering.",
+      "WP44-55: straight westward along y\u22482.77.",
+      "WP82-96: sharp south/southeast curve \u2014 large positive delta, need max left steering.",
+      "WP97-115: heading ~0-18\u00b0, car ascending northeast \u2014 positive deltas persist.",
+      "WP109-120: track curves sharply back east; large positive deltas, use steering_angle=+20 at speed=1.0.",
+      "Near WP117-118 on the straight, car heading tends to overshoot ~27-28\u00b0 while track is ~0\u00b0; need sustained right correction.",
+      "When |delta| < 5\u00b0, use steering_angle=0 at speed=1.5 to avoid oscillation.",
+      "Car is consistently left of center near WP117-118; need to steer right aggressively to realign."
+    ],
+    "movement_analysis": {
+      "x": [
+        2.743,
+        2.811,
+        2.895,
+        2.989
+      ],
+      "y": [
+        0.641,
+        0.695,
+        0.752,
+        0.809
+      ],
+      "heading": [
+        18.209,
+        23.967,
+        27.108,
+        28.46
+      ]
+    },
+    "waypoint_analysis": "Target WP2 at (3.359, 0.683): bearing\u2248-18.80\u00b0, delta\u2248-47.26\u00b0 \u2192 waypoint to the RIGHT, steer right.",
+    "speed": 1.0,
+    "steering_angle": -20.0
+  },
+  "normalized_action": 1,
+  "steering_angle": -20.0,
+  "speed": 1.0,
+  "inference_time": 19.38301420211792,
+  "timestamp": "20260327-101257"
+}

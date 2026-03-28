@@ -1,0 +1,48 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Car is stationary or nearly so at x=1.607, y=0.952 with heading -48.6\u00b0, delta=+44\u00b0 to WP113 means strong left correction needed to align with eastward track direction.",
+    "knowledge": [
+      "Positive steering = left turn (CCW heading increase), negative = right turn (CW)",
+      "Track centerline y~0.68 at this section, car y~0.95 \u2014 car is ~0.27m north of center",
+      "Heading stuck near -48\u00b0 for multiple frames \u2014 car appears nearly stationary",
+      "Track runs nearly due east for next ~20 waypoints (y stays ~0.68)",
+      "After heading aligns with track, reduce steering quickly to avoid overshoot",
+      "Track width 0.75m \u2014 very narrow, precision required",
+      "Once delta < 10\u00b0, switch to 0 or minimal steering to avoid oscillation",
+      "Car is left of center \u2014 needs to drift right as heading corrects eastward",
+      "Progress 91.3% \u2014 nearly complete lap, stay on track at all costs",
+      "25\u00b0 steering at 0.75 speed not moving car \u2014 may be stuck; maintain action"
+    ],
+    "movement_analysis": {
+      "x": [
+        1.85,
+        1.632,
+        1.607,
+        1.607,
+        1.607
+      ],
+      "y": [
+        1.282,
+        0.939,
+        0.952,
+        0.952,
+        0.952
+      ],
+      "yaw": [
+        -30.74,
+        -47.04,
+        -48.57,
+        -48.57,
+        -48.57
+      ]
+    },
+    "waypoint_analysis": "Target WP113 at (5.007, 0.684): dy=-0.268, dx=3.399, bearing=-4.50\u00b0, delta=+44.07\u00b0 \u2192 LEFT steer needed",
+    "speed": 0.75,
+    "steering_angle": 25.0
+  },
+  "normalized_action": 12,
+  "steering_angle": 25.0,
+  "speed": 0.75,
+  "inference_time": 16.93215799331665,
+  "timestamp": "20260327-025518"
+}

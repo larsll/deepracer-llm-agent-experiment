@@ -1,0 +1,48 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Track goes straight eastward ahead but car heading is ~-83\u00b0 (nearly due south), delta=+76\u00b0 still requires maximum left steering to realign toward the eastward track direction.",
+    "knowledge": [
+      "Positive steering = left turn, negative = right turn",
+      "Car slowly turning left: heading improving from -98\u00b0 toward -83\u00b0 over last several steps",
+      "Target WP94 gives delta ~+76\u00b0 \u2014 hard left still needed to realign heading toward eastward track",
+      "Track goes east from current position; waypoints run from x=0.5 to x=6+ eastward",
+      "Speed 0.75 for |delta|>50\u00b0; 1.0 for 30-50\u00b0; 1.5 for <30\u00b0",
+      "After heading swings past -50\u00b0, reduce steering to avoid overshoot",
+      "Car is right of center (is_left_of_center=false), distance_from_center=0.090m",
+      "Continue max left steering until heading aligns with eastward track direction (~-10\u00b0)",
+      "Progress barely advancing at 75.28% \u2014 car is very slow but all wheels on track",
+      "Track width is 0.76m \u2014 narrow track, stay near center"
+    ],
+    "movement_analysis": {
+      "x": [
+        0.539,
+        0.555,
+        0.574,
+        0.592,
+        0.623
+      ],
+      "y": [
+        3.642,
+        3.588,
+        3.539,
+        3.499,
+        3.448
+      ],
+      "yaw": [
+        -96.4,
+        -93.69,
+        -90.82,
+        -88.12,
+        -83.11
+      ]
+    },
+    "waypoint_analysis": "Target WP94 at (6.079, 2.773): dy=-0.675, dx=5.456, bearing=-7.05\u00b0, delta=+76.06\u00b0 \u2192 steer hard LEFT",
+    "speed": 0.75,
+    "steering_angle": 25.0
+  },
+  "normalized_action": 12,
+  "steering_angle": 25.0,
+  "speed": 0.75,
+  "inference_time": 16.586485147476196,
+  "timestamp": "20260327-025518"
+}

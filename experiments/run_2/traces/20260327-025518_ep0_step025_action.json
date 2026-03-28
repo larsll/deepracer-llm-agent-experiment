@@ -1,0 +1,48 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Track is nearly straight ahead with a gentle right curve beginning around x=6.5; delta to target waypoint 21 is ~4.4\u00b0, under 5\u00b0, so maintain full speed with zero steering to avoid oscillation.",
+    "knowledge": [
+      "Track starts with a long straight section heading due east (~0\u00b0 heading)",
+      "Car is nearly perfectly centered on track, slightly right of center",
+      "Sharp right curve begins around waypoints 24-32 (x=6.5-7.3)",
+      "After the right curve, track goes west around y=2.7-4.5 then loops back south",
+      "Positive steering = left turn, negative = right turn",
+      "On straights with |delta|<5\u00b0, use steering_angle=0 to avoid oscillation",
+      "Track width is ~0.76m",
+      "Speed 1.5 is safe on straights; reduce to 1.0 or 0.75 for sharp turns",
+      "Car has been holding steady heading ~-1.5\u00b0 on the straight \u2014 on course",
+      "Need to prepare for right turn (negative steering) starting around x=6.3-6.5"
+    ],
+    "movement_analysis": {
+      "x": [
+        5.113,
+        5.163,
+        5.213,
+        5.278,
+        5.328
+      ],
+      "y": [
+        0.6474,
+        0.646,
+        0.6447,
+        0.643,
+        0.6421
+      ],
+      "yaw": [
+        -1.548,
+        -1.58,
+        -1.613,
+        -1.55,
+        -1.493
+      ]
+    },
+    "waypoint_analysis": "Target WP21 at (6.205, 0.686): dy=0.044, dx=0.877, bearing=2.88\u00b0, delta=+4.37\u00b0 \u2192 essentially straight, no correction needed",
+    "speed": 1.5,
+    "steering_angle": 0.0
+  },
+  "normalized_action": 6,
+  "steering_angle": 0.0,
+  "speed": 1.5,
+  "inference_time": 14.444565296173096,
+  "timestamp": "20260327-025518"
+}

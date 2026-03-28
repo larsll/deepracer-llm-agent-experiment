@@ -1,0 +1,42 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Track curves right ahead with delta of -13.25\u00b0 to target waypoint, requiring moderate right steering at speed 1.5.",
+    "knowledge": [
+      "Track curves sharply south near waypoints 91-100 (x decreasing, y decreasing)",
+      "Heading must swing from -80\u00b0 toward -94\u00b0 to follow track southward",
+      "Negative delta means steer right (negative steering_angle)",
+      "At delta ~13\u00b0, use speed=1.5 and steering=-10\u00b0 to avoid overshoot",
+      "Car is slightly left of center \u2014 acceptable for right-curving track",
+      "Track width 0.76m \u2014 narrow, maintain control through turn",
+      "After sharp right turn, waypoints continue south then loop back east",
+      "Avoid overcorrecting \u2014 once delta < 5\u00b0, reduce steering to 0\u00b0",
+      "Car is progressing through turn section (~79% progress)",
+      "all_wheels_on_track=true \u2014 car is stable on track"
+    ],
+    "movement_analysis": {
+      "x": [
+        1.018,
+        1.018,
+        1.011
+      ],
+      "y": [
+        2.967,
+        2.837,
+        2.793
+      ],
+      "yaw": [
+        -74.9,
+        -79.4,
+        -80.7
+      ]
+    },
+    "waypoint_analysis": -13.25,
+    "speed": 1.5,
+    "steering_angle": -10.0
+  },
+  "normalized_action": 3,
+  "steering_angle": -10.0,
+  "speed": 1.5,
+  "inference_time": 15.902369022369385,
+  "timestamp": "20260326-172636"
+}

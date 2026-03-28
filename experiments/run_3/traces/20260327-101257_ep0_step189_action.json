@@ -1,0 +1,45 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Track curves left ahead but WP110 is now slightly behind/below the car's heading, giving delta\u2248-22.4\u00b0 requiring a right correction to stay on the waypoint line as the curve tightens.",
+    "knowledge": [
+      "Track total 121 waypoints, ~17.7m length.",
+      "WP0-20: long straight along y\u22480.683 heading east.",
+      "WP24-44: left curve from east to west, requires sustained positive steering.",
+      "WP44-55: straight westward along y\u22482.77.",
+      "WP82-96: sharp south/southeast curve \u2014 large positive delta, need max left steering.",
+      "WP97-112: heading ~-55 to -90\u00b0, car descending south \u2014 delta can flip negative as car overshoots bearing.",
+      "WP110 is at (1.253, 1.089) \u2014 nearly due south of WP105 region, car must steer right to align.",
+      "When |delta|>50\u00b0, use steering_angle=+25 at speed=0.75.",
+      "When |delta| 15-30\u00b0, use steering_angle=\u00b115 at speed=1.5.",
+      "When |delta| 5-15\u00b0, use steering_angle=\u00b15 at speed=1.5 to avoid oversteer."
+    ],
+    "movement_analysis": {
+      "x": [
+        1.108,
+        1.143,
+        1.185,
+        1.246
+      ],
+      "y": [
+        1.232,
+        1.196,
+        1.161,
+        1.122
+      ],
+      "heading": [
+        -68.703,
+        -65.667,
+        -61.285,
+        -55.242
+      ]
+    },
+    "waypoint_analysis": "Target WP110 at (1.253, 1.089): bearing\u2248-77.7\u00b0, delta\u2248-22.4\u00b0 \u2192 steer right.",
+    "speed": 1.5,
+    "steering_angle": -15.0
+  },
+  "normalized_action": 2,
+  "steering_angle": -15.0,
+  "speed": 1.5,
+  "inference_time": 18.35404944419861,
+  "timestamp": "20260327-101257"
+}

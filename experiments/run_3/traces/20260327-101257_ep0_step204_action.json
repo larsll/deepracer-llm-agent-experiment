@@ -1,0 +1,45 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Track is a long straight ahead but car is right of center (~0.19m from right edge) with delta\u2248+52\u00b0 requiring strong left steering to follow waypoint line back toward center.",
+    "knowledge": [
+      "Track total 121 waypoints, ~17.7m length.",
+      "WP0-20: long straight along y\u22480.683 heading east.",
+      "WP24-44: left curve from east to west, requires sustained positive steering.",
+      "WP44-55: straight westward along y\u22482.77.",
+      "WP82-96: sharp south/southeast curve \u2014 large positive delta, need max left steering.",
+      "WP97-115: heading ~-18 to -22\u00b0, car descending southeast \u2014 large positive deltas (+50-65\u00b0).",
+      "WP109-120: track curves sharply back east; large positive deltas (+50\u00b0+), use steering_angle=+20 at speed=1.0.",
+      "Car consistently right of center near WP113-114 (~0.19m); edge_distance ~0.19m, steer left to recover.",
+      "When |delta| < 5\u00b0, use steering_angle=0 at speed=1.5 to avoid oscillation.",
+      "When delta > 50\u00b0, use steering_angle=+20 at speed=1.0 for controlled left turn."
+    ],
+    "movement_analysis": {
+      "x": [
+        2.106,
+        2.184,
+        2.247,
+        2.312
+      ],
+      "y": [
+        0.508,
+        0.49,
+        0.482,
+        0.479
+      ],
+      "heading": [
+        -30.509,
+        -26.657,
+        -22.396,
+        -18.305
+      ]
+    },
+    "waypoint_analysis": "Target WP119 at (2.610, 0.681): bearing\u224834.11\u00b0, delta\u2248+52.42\u00b0 \u2192 steer left strongly, steering_angle=+20.",
+    "speed": 1.0,
+    "steering_angle": 20.0
+  },
+  "normalized_action": 11,
+  "steering_angle": 20.0,
+  "speed": 1.0,
+  "inference_time": 19.778253316879272,
+  "timestamp": "20260327-101257"
+}

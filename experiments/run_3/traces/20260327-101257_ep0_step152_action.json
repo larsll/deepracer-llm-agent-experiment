@@ -1,0 +1,48 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Track curves left ahead, car is 0.21m from right edge with delta +73\u00b0 requiring maximum left steering to follow the curve toward WP96.",
+    "knowledge": [
+      "Track total 121 waypoints, ~17.7m length.",
+      "WP0-20: long straight along y\u22480.683 heading east.",
+      "WP24-44: left curve from east to west, requires sustained positive steering.",
+      "WP44-55: straight westward along y\u22482.77.",
+      "WP55-70: gentle southwest curve with moderate positive delta.",
+      "WP82-96: sharp south/southeast curve \u2014 delta very large positive (~73-85\u00b0), need max left steering (25\u00b0) at speed 0.75.",
+      "Car consistently right of center (~0.17-0.21m) in WP90-91 region \u2014 edge_distance ~0.17-0.21m.",
+      "Steering left (positive) moves car away from right edge in this section \u2014 safe to apply max left.",
+      "After WP96+, track continues curving \u2014 expect delta to remain large positive for several more steps.",
+      "Prefer speed 1.5 on straights; reduce to 0.75 when |delta|>50\u00b0."
+    ],
+    "movement_analysis": {
+      "x": [
+        0.461,
+        0.488,
+        0.513,
+        0.535,
+        0.571
+      ],
+      "y": [
+        3.431,
+        3.376,
+        3.33,
+        3.293,
+        3.246
+      ],
+      "heading": [
+        -97.002,
+        -91.684,
+        -87.267,
+        -83.814,
+        -78.311
+      ]
+    },
+    "waypoint_analysis": "Target WP96 at (5.780, 2.771): bearing\u2248-5.2\u00b0, delta\u2248+73.1\u00b0 \u2192 large left correction needed.",
+    "speed": 0.75,
+    "steering_angle": 25.0
+  },
+  "normalized_action": 12,
+  "steering_angle": 25.0,
+  "speed": 0.75,
+  "inference_time": 18.653735160827637,
+  "timestamp": "20260327-101257"
+}

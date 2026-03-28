@@ -1,0 +1,45 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Car is nearly stationary at x=0.53, y=3.77 with heading -102\u00b0 (facing mostly south), but the target waypoint is far to the east giving delta +92.43\u00b0, so I need maximum left steering to turn the car toward the track direction.",
+    "knowledge": [
+      "Positive steering = left turn, negative = right turn",
+      "Car is stuck near x=0.53, y=3.77 \u2014 barely moving despite hard left steering",
+      "Heading -102\u00b0 means car faces south; needs to swing to ~-10\u00b0 (east) to follow track",
+      "WP+5 target gives large positive delta (~90\u00b0) \u2014 confirms sustained hard left needed",
+      "Speed 0.75 for |delta|>50\u00b0; 1.0 for 30-50\u00b0; 1.5 for <30\u00b0",
+      "Track curves right (east) ahead \u2014 waypoints go from x=0.5 to x=6+ eastward",
+      "Car may be spinning or oscillating \u2014 position barely changed from step 140 to 141",
+      "All wheels on track confirmed \u2014 continue hard left to realign heading",
+      "After heading swings past -50\u00b0, reduce steering to avoid overshoot",
+      "Track width ~0.76m, car 0.19m right of center \u2014 manageable position"
+    ],
+    "movement_analysis": {
+      "x": [
+        0.18,
+        0.123,
+        0.535,
+        0.531
+      ],
+      "y": [
+        4.048,
+        4.03,
+        3.746,
+        3.772
+      ],
+      "yaw": [
+        -179.42,
+        -176.62,
+        -100.48,
+        -102.25
+      ]
+    },
+    "waypoint_analysis": "Target WP92 at (6.381, 2.760): dy=-1.013, dx=5.850, bearing=-9.82\u00b0, delta=+92.43\u00b0 \u2192 steer hard LEFT",
+    "speed": 0.75,
+    "steering_angle": 25.0
+  },
+  "normalized_action": 12,
+  "steering_angle": 25.0,
+  "speed": 0.75,
+  "inference_time": 16.099592208862305,
+  "timestamp": "20260327-025518"
+}

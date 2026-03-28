@@ -1,0 +1,45 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Track curves left ahead, car is slightly right of center, WP60 is nearly aligned with heading (delta=-5.5\u00b0), applying minimal right steering to stay on waypoint line.",
+    "knowledge": [
+      "Track curves left (southwest) from WP55-65, heading decreasing from ~145\u00b0 to ~120\u00b0",
+      "Car consistently stable near center, small corrections sufficient",
+      "Positive steering = left turn, negative = right turn",
+      "Delta around -5 to -10\u00b0 on this section requires steering_angle=-5",
+      "After WP65-70, track curves more sharply left heading south \u2014 prepare larger left steer",
+      "Heading wraps near \u00b1180\u00b0 when traveling west \u2014 normalize delta carefully",
+      "Speed 1.5 is safe on moderate curves; reduce to 1.0 or 0.75 for sharp turns",
+      "WP58-65 marks increasing left curve heading southwest, left steering needed soon",
+      "Car has been consistently making small right corrections on westward section",
+      "Watch for delta sign flip when track turns left past WP65-70"
+    ],
+    "movement_analysis": {
+      "x": [
+        4.787,
+        4.706,
+        4.641,
+        4.569
+      ],
+      "y": [
+        2.75,
+        2.815,
+        2.881,
+        2.961
+      ],
+      "yaw": [
+        158.23,
+        152.76,
+        147.24,
+        142.46
+      ]
+    },
+    "waypoint_analysis": "Target WP60 at (3.972, 3.519): dy=0.557, dx=-0.597, bearing=137.0\u00b0, delta=-5.46\u00b0 \u2192 tiny right, steer -5\u00b0",
+    "speed": 1.5,
+    "steering_angle": -5.0
+  },
+  "normalized_action": 4,
+  "steering_angle": -5.0,
+  "speed": 1.5,
+  "inference_time": 15.275906324386597,
+  "timestamp": "20260327-025518"
+}

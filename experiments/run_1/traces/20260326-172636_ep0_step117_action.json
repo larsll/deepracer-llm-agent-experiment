@@ -1,0 +1,48 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Car has all_wheels_on_track=false and is 0.38m from center (track width 0.76m means nearly at edge), still in the right-hand curve with heading 148\u00b0, must steer hard right to stay on track.",
+    "knowledge": [
+      "Track has a long westward straight around waypoints 70-76, heading ~160-170\u00b0",
+      "After waypoint ~76, track curves sharply south then southeast \u2014 sustained right steering needed",
+      "Lookahead waypoints beyond the curve give misleading large positive deltas due to heading wrap-around at ~180\u00b0",
+      "When navigating the right-hand curve after waypoint 76, use -25 steering at speed 0.75 to avoid going off track",
+      "Car heading decreasing: 169\u2192152\u2192148 \u2014 right turn working but car going off track at step 116",
+      "all_wheels_on_track=false at step 116 with distance_from_center=0.38 (track_width=0.76) \u2014 very close to edge",
+      "Must use maximum right steering (-25) at low speed (0.75) to recover and complete the curve",
+      "Car is right of center (is_left_of_center=false) \u2014 drifting to outside of right-hand curve",
+      "Reduce speed to 0.75 and increase steering to -25 when off-track in this curve section",
+      "Visual shows dark wall on left \u2014 car near left/outer boundary of the southward curve"
+    ],
+    "movement_analysis": {
+      "x": [
+        1.888,
+        1.831,
+        1.775,
+        1.725,
+        1.676
+      ],
+      "y": [
+        4.682,
+        4.715,
+        4.759,
+        4.806,
+        4.855
+      ],
+      "yaw": [
+        164.196,
+        161.295,
+        156.583,
+        152.308,
+        148.741
+      ]
+    },
+    "waypoint_analysis": -175.86,
+    "speed": 0.75,
+    "steering_angle": -25.0
+  },
+  "normalized_action": 0,
+  "steering_angle": -25.0,
+  "speed": 0.75,
+  "inference_time": 19.910853147506714,
+  "timestamp": "20260326-172636"
+}

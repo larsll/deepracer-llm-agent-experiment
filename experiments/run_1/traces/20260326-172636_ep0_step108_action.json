@@ -1,0 +1,45 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Track curves gently right ahead as car approaches the westward-to-south bend, delta to lookahead waypoint is slightly negative so applying gentle right correction.",
+    "knowledge": [
+      "Track has a long westward straight around waypoints 70-80, heading ~160-166\u00b0",
+      "Car is slightly right of center (is_left_of_center=false) on westward straight",
+      "After waypoint ~74-76, track curves sharply south \u2014 need right steering",
+      "Full circuit ~17.7m, speed 1.5 appropriate for straight sections",
+      "Use steering_angle=0 for |delta| <5\u00b0 to avoid oscillation",
+      "Waypoints 73-77 are very close together near y=4.49-4.50, then track turns south",
+      "Car heading ~165\u00b0 on westward straight, approaching right-hand curve",
+      "When approaching curve, reduce steering overshoot by using -5 rather than larger angles",
+      "Track curves right (south) after waypoint 76, anticipate negative steering",
+      "Lookahead waypoints beyond the curve give misleading large deltas \u2014 use closer targets"
+    ],
+    "movement_analysis": {
+      "x": [
+        2.651,
+        2.538,
+        2.436,
+        2.346
+      ],
+      "y": [
+        4.515,
+        4.547,
+        4.567,
+        4.58
+      ],
+      "yaw": [
+        160.181,
+        161.279,
+        163.487,
+        165.844
+      ]
+    },
+    "waypoint_analysis": -10.0,
+    "speed": 1.5,
+    "steering_angle": -10.0
+  },
+  "normalized_action": 3,
+  "steering_angle": -10.0,
+  "speed": 1.5,
+  "inference_time": 22.316256284713745,
+  "timestamp": "20260326-172636"
+}

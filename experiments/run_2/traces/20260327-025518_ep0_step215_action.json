@@ -1,0 +1,45 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Car heading -53\u00b0 with delta=+39.25\u00b0 to target WP109, still needs significant left steering to rotate heading toward ~-14\u00b0 to align with the eastward track; reducing to steering=20 as delta is decreasing.",
+    "knowledge": [
+      "Positive steering = left turn (CCW), negative = right turn (CW)",
+      "Car slowly rotating: heading improved from -75\u00b0 \u2192 -58\u00b0 \u2192 -53\u00b0 over steps",
+      "Delta ~+39\u00b0 requires speed 1.0 and steering 20\u00b0 (strong left)",
+      "Track at this section runs roughly east (waypoints y~0.68, increasing x)",
+      "Car heading ~-53\u00b0 needs to rotate to ~-14\u00b0 to align with track bearing",
+      "Once delta drops below 30\u00b0, reduce steering to 15\u00b0 to avoid overshoot",
+      "is_left_of_center=true, 0.39m from center \u2014 near left edge, must correct",
+      "all_wheels_on_track=false but is_offtrack=false \u2014 car is on edge, be careful",
+      "Track width 0.761m \u2014 narrow, must stay near center once heading corrected",
+      "Progress at 87.8% \u2014 approaching end of lap, maintain control"
+    ],
+    "movement_analysis": {
+      "x": [
+        1.425,
+        1.463,
+        1.502,
+        1.556
+      ],
+      "y": [
+        1.488,
+        1.454,
+        1.426,
+        1.395
+      ],
+      "yaw": [
+        -65.25,
+        -62.01,
+        -58.1,
+        -53.25
+      ]
+    },
+    "waypoint_analysis": "Target WP109 at (4.408, 0.684): dy=-0.711, dx=2.852, bearing=-14.00\u00b0, delta=+39.25\u00b0 \u2192 strong LEFT turn needed",
+    "speed": 1.0,
+    "steering_angle": 20.0
+  },
+  "normalized_action": 11,
+  "steering_angle": 20.0,
+  "speed": 1.0,
+  "inference_time": 16.528698921203613,
+  "timestamp": "20260327-025518"
+}

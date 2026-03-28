@@ -1,0 +1,36 @@
+{
+  "model_id": "eu.anthropic.claude-sonnet-4-6",
+  "response_body": {
+    "model": "claude-sonnet-4-6",
+    "id": "msg_bdrk_014p4MsZbenr5GkM6qo7bJn4",
+    "type": "message",
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "```json\n{\n  \"reasoning\": \"Initial state with zeroed-out telemetry; the image shows a track curving to the left ahead, so I'll apply a gentle left steering to follow the curve.\",\n  \"knowledge\": [\n    \"Track curves left at the start based on visual\",\n    \"All telemetry is zeroed at initialization \u2014 use visual cues only\",\n    \"Apply moderate left steering to follow visible left curve\"\n  ],\n  \"movement_analysis\": {\n    \"x\": [0.0],\n    \"y\": [0.0],\n    \"yaw\": [0.0]\n  },\n  \"waypoint_analysis\": 10,\n  \"speed\": 1.5,\n  \"steering_angle\": 10.0\n}\n```"
+      }
+    ],
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "usage": {
+      "input_tokens": 1728,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 181
+    }
+  },
+  "timestamp": "20260326-172636",
+  "inference_time": 4.478138446807861,
+  "episode": 0,
+  "step": 1,
+  "token_usage": {
+    "input_tokens": 1728,
+    "output_tokens": 181,
+    "total_tokens": 1909
+  }
+}

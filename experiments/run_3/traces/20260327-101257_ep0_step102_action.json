@@ -1,0 +1,45 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Track curves left ahead, delta=+23\u00b0 to WP73 indicates continued moderate left correction; car is 0.045m left of center with 0.335m edge clearance, maintaining +10\u00b0 steering at full speed.",
+    "knowledge": [
+      "Track starts with long straight along y\u22480.683 before curving left around x=6.3-7.3.",
+      "Left curve spans WP27-44 requiring sustained positive steering ~15\u00b0.",
+      "After left curve, track straightens westward along y\u22482.77 (WP44-55).",
+      "WP55-70 region: track bends southwest with gentle-to-moderate left curve, delta ~+17-23\u00b0.",
+      "WP66-73 section: delta consistently ~+21-23\u00b0, requiring +10\u00b0 steering at 1.5 speed.",
+      "Car consistently ~0.03-0.05m left of center in WP66-73 section \u2014 no boundary concern.",
+      "Prefer speed 1.5 on straights and gentle curves; reduce to 1.0 only when delta >30\u00b0.",
+      "Track total length ~17.7m, 121 waypoints.",
+      "Use minimal steering on near-straight sections to avoid oscillation.",
+      "Delta ~+23\u00b0 persisting across WP68-73 \u2014 expect continued left steering toward WP74-80."
+    ],
+    "movement_analysis": {
+      "x": [
+        3.4732,
+        3.3943,
+        3.3227,
+        3.2117
+      ],
+      "y": [
+        4.158,
+        4.2123,
+        4.2578,
+        4.3186
+      ],
+      "heading": [
+        140.852,
+        142.12,
+        143.39,
+        146.246
+      ]
+    },
+    "waypoint_analysis": "Target WP73 at (2.289, 4.493): bearing=169.30\u00b0, delta=+23.05\u00b0 \u2192 moderate left correction needed.",
+    "speed": 1.5,
+    "steering_angle": 10.0
+  },
+  "normalized_action": 9,
+  "steering_angle": 10.0,
+  "speed": 1.5,
+  "inference_time": 19.383255004882812,
+  "timestamp": "20260327-101257"
+}

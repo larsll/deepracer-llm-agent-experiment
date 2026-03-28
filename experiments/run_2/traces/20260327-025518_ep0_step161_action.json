@@ -1,0 +1,45 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Delta of +34.52\u00b0 means the target waypoint is still to the left of current heading; continuing left steering at speed 1.0 to align heading toward the eastward track direction.",
+    "knowledge": [
+      "Positive steering = left turn, negative = right turn",
+      "Car slowly turning left: heading improving from -65\u00b0 toward -39\u00b0 over last several steps",
+      "Target WP97 gives delta ~+35\u00b0 \u2014 significant left correction still needed to align heading eastward",
+      "Track goes east from current position; waypoints run from x=0.5 to x=6+ eastward",
+      "Speed 0.75 for |delta|>50\u00b0; 1.0 for 30-50\u00b0; 1.5 for <30\u00b0",
+      "After heading swings past -10\u00b0, reduce steering to avoid overshoot",
+      "Car is 0.28m left of center \u2014 slightly wide left, will correct as heading aligns",
+      "Continue left steering until heading aligns with eastward track direction (~-5\u00b0)",
+      "Progress at 77.6% \u2014 car is slow but all wheels on track",
+      "Track width is 0.76m \u2014 narrow track, stay near center"
+    ],
+    "movement_analysis": {
+      "x": [
+        0.893,
+        0.942,
+        0.994,
+        1.065
+      ],
+      "y": [
+        3.209,
+        3.183,
+        3.16,
+        3.132
+      ],
+      "yaw": [
+        -52.41,
+        -48.7,
+        -44.64,
+        -39.06
+      ]
+    },
+    "waypoint_analysis": "Target WP97 at (5.631, 2.770): dy=-0.363, dx=4.565, bearing=-4.54\u00b0, delta=+34.52\u00b0 \u2192 steer LEFT",
+    "speed": 1.0,
+    "steering_angle": 20.0
+  },
+  "normalized_action": 11,
+  "steering_angle": 20.0,
+  "speed": 1.0,
+  "inference_time": 16.03640627861023,
+  "timestamp": "20260327-025518"
+}

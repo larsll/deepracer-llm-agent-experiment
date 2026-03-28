@@ -1,0 +1,48 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Car is still heading -177\u00b0 (nearly due west) while track runs eastward; massive positive delta of ~155\u00b0 requires continued maximum left steering at low speed to realign with the track direction.",
+    "knowledge": [
+      "Car stuck near x=1.43, y=4.65 for multiple steps \u2014 heading -177\u00b0 facing west, needs full realignment",
+      "Track runs roughly east (positive X direction) near waypoints 80-85",
+      "Large positive delta (~155\u00b0) requires maximum left steering (25\u00b0) at low speed (0.75)",
+      "Car appears to be executing a very slow U-turn recovery \u2014 must persist with max left steer",
+      "is_left_of_center=false means car is right of center \u2014 acceptable during recovery",
+      "Track width 0.76m \u2014 limited margin, must stay on track during realignment",
+      "Progress ~67% near waypoints 79-80, track curves left ahead",
+      "Visual confirms sharp left curve ahead \u2014 car on right side of track near outer edge",
+      "Keep max left steering until heading approaches target bearing (~-22\u00b0)",
+      "Once heading aligns with track direction, reduce steering and increase speed"
+    ],
+    "movement_analysis": {
+      "x": [
+        1.558,
+        1.539,
+        1.412,
+        1.434,
+        1.434
+      ],
+      "y": [
+        5.045,
+        5.098,
+        4.664,
+        4.655,
+        4.655
+      ],
+      "yaw": [
+        133.138,
+        129.4,
+        -178.573,
+        -177.643,
+        -177.643
+      ]
+    },
+    "waypoint_analysis": 154.94,
+    "speed": 0.75,
+    "steering_angle": 25.0
+  },
+  "normalized_action": 12,
+  "steering_angle": 25.0,
+  "speed": 0.75,
+  "inference_time": 16.653667449951172,
+  "timestamp": "20260326-172636"
+}

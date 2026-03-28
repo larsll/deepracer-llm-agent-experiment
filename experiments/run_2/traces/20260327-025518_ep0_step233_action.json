@@ -1,0 +1,45 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Track runs straight east ahead, car heading -25.6\u00b0 with delta=+23.6\u00b0 still requiring left steering to align with the eastward track centerline.",
+    "knowledge": [
+      "Positive steering = left turn (CCW heading increase), negative = right turn (CW)",
+      "Track centerline y~0.68 at this straight section, car y~0.81 \u2014 slightly north of center",
+      "Car heading steadily correcting: -43.96 \u2192 -38.01 \u2192 -30.52 \u2192 -25.60, continue left steer",
+      "Track runs nearly due east for next ~20 waypoints (y stays ~0.68)",
+      "After heading aligns with track (~-2\u00b0), reduce steering quickly to avoid overshoot",
+      "Track width 0.76m \u2014 very narrow, precision required",
+      "Once delta < 10\u00b0, switch to 0 or minimal steering to avoid oscillation",
+      "Progress 93.7% \u2014 nearly complete lap, stay on track at all costs",
+      "Car is left of center \u2014 needs to drift right as heading corrects eastward",
+      "Speed 0.75 appropriate while large heading correction needed"
+    ],
+    "movement_analysis": {
+      "x": [
+        1.821,
+        1.871,
+        1.911,
+        1.968
+      ],
+      "y": [
+        0.831,
+        0.818,
+        0.811,
+        0.807
+      ],
+      "yaw": [
+        -38.01,
+        -34.23,
+        -30.52,
+        -25.6
+      ]
+    },
+    "waypoint_analysis": "Target WP116 at (5.456, 0.684): dy=-0.122, dx=3.488, bearing=-2.01\u00b0, delta=+23.6\u00b0 \u2192 LEFT steer needed",
+    "speed": 0.75,
+    "steering_angle": 25.0
+  },
+  "normalized_action": 12,
+  "steering_angle": 25.0,
+  "speed": 0.75,
+  "inference_time": 16.833184003829956,
+  "timestamp": "20260327-025518"
+}

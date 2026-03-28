@@ -1,0 +1,45 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Track curves left ahead but WP80 (target lookahead) is slightly right of current heading with delta=-16\u00b0, requiring a small right correction at full speed.",
+    "knowledge": [
+      "Positive steering = left turn, negative = right turn",
+      "Delta under 5\u00b0 means steer 0 to avoid oscillation",
+      "Delta 5-15\u00b0 use \u00b15\u00b0; 15-30\u00b0 use \u00b110 to \u00b115\u00b0; 30-50\u00b0 use \u00b115 to \u00b120\u00b0",
+      "Near WP72-80, track runs nearly due west with very small deltas",
+      "Speed 1.5 safe on straight/gentle curve sections",
+      "Car is slightly left of center (0.10m) but all wheels on track",
+      "Heading near 167\u00b0 corresponds to west-northwest travel",
+      "After WP80, track continues westward then curves south \u2014 watch for larger deltas",
+      "Oversteer warning: avoid excessive correction when near track center",
+      "When target WP is behind car, use further lookahead WP for bearing calculation"
+    ],
+    "movement_analysis": {
+      "x": [
+        2.896,
+        2.791,
+        2.706,
+        2.613
+      ],
+      "y": [
+        4.343,
+        4.357,
+        4.37,
+        4.394
+      ],
+      "yaw": [
+        162.96,
+        166.1,
+        167.13,
+        166.67
+      ]
+    },
+    "waypoint_analysis": "Target WP80 at (2.429, 4.498): dy=0.104, dx=-0.184, bearing=150.6\u00b0, delta=-16.1\u00b0 \u2192 steer right with -15\u00b0",
+    "speed": 1.5,
+    "steering_angle": -15.0
+  },
+  "normalized_action": 2,
+  "steering_angle": -15.0,
+  "speed": 1.5,
+  "inference_time": 19.91033673286438,
+  "timestamp": "20260327-025518"
+}

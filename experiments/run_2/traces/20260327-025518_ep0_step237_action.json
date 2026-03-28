@@ -1,0 +1,42 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Track is a long straight ahead, car heading -2.14\u00b0 nearly matches bearing -2.65\u00b0 to target waypoint (delta=-0.51\u00b0), so no steering correction needed \u2014 maintain speed.",
+    "knowledge": [
+      "Positive steering = left turn (CCW heading increase), negative = right turn (CW)",
+      "Track centerline y~0.68 at this straight section, car y~0.847 \u2014 slightly north of center but heading corrected",
+      "Car heading correcting well: -43.96 \u2192 -21.19 \u2192 -10.93 \u2192 -2.14",
+      "Delta now ~0\u00b0 \u2014 car is aligned with waypoint bearing, no correction needed",
+      "Track runs nearly due east for next ~20 waypoints (y stays ~0.68)",
+      "Once delta < 5\u00b0, switch to 0 steering to avoid oscillation",
+      "Track width 0.76m \u2014 very narrow, precision required",
+      "Progress 95.4% \u2014 nearly complete lap, stay on track at all costs",
+      "Oversteer warning: delta now <1\u00b0, use 0 steering to avoid oscillation",
+      "Car is left of center (y=0.847 vs centerline y=0.68) but heading will naturally correct this"
+    ],
+    "movement_analysis": {
+      "x": [
+        2.062,
+        2.161,
+        2.249
+      ],
+      "y": [
+        0.808,
+        0.823,
+        0.847
+      ],
+      "yaw": [
+        -21.19,
+        -10.93,
+        -2.14
+      ]
+    },
+    "waypoint_analysis": "Target WP118 at (5.755, 0.684): dy=-0.162, dx=3.507, bearing=-2.65\u00b0, delta=-0.51\u00b0 \u2192 essentially straight, no correction needed",
+    "speed": 1.5,
+    "steering_angle": 0.0
+  },
+  "normalized_action": 6,
+  "steering_angle": 0.0,
+  "speed": 1.5,
+  "inference_time": 16.620103359222412,
+  "timestamp": "20260327-025518"
+}

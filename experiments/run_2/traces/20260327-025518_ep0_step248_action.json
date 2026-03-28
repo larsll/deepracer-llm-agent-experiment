@@ -1,0 +1,42 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Car is still 0.232m left of center on a straight track with delta=-26.9\u00b0 to target waypoint, requiring continued strong right steering to return to centerline.",
+    "knowledge": [
+      "Positive steering = left turn (CCW), negative = right turn (CW)",
+      "Track centerline y~0.683 on this straight section; car y~0.915 means car is far left of center",
+      "Car has been persistently left of center despite -25\u00b0 steering \u2014 very slow correction",
+      "When delta > 25\u00b0, use speed=0.75 and steering=-25 for maximum correction",
+      "Track runs nearly due east for next ~20 waypoints (y stays ~0.68)",
+      "Once delta < 5\u00b0, switch to 0 steering to avoid oscillation",
+      "Track width 0.76m \u2014 very narrow, precision required",
+      "Progress 99.75% \u2014 nearly complete lap, stay on track at all costs",
+      "All wheels on track \u2014 car is on asphalt but left of center",
+      "Heading ~-7\u00b0 but need bearing ~-34\u00b0 \u2014 large negative delta persists"
+    ],
+    "movement_analysis": {
+      "x": [
+        2.928,
+        2.97,
+        3.017
+      ],
+      "y": [
+        0.958,
+        0.941,
+        0.915
+      ],
+      "yaw": [
+        -0.04,
+        -3.34,
+        -7.18
+      ]
+    },
+    "waypoint_analysis": "Target WP2 at (3.359, 0.683): dy=-0.232, dx=0.343, bearing=-34.07\u00b0, delta=-26.89\u00b0 \u2192 strong right correction needed",
+    "speed": 0.75,
+    "steering_angle": -25.0
+  },
+  "normalized_action": 0,
+  "steering_angle": -25.0,
+  "speed": 0.75,
+  "inference_time": 16.791452884674072,
+  "timestamp": "20260327-025518"
+}

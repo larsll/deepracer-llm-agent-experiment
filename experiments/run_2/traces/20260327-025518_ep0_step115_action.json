@@ -1,0 +1,45 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Track curves left ahead with car right of center; delta of +35\u00b0 to WP83 confirms continued left turn requiring strong left steering at moderate speed.",
+    "knowledge": [
+      "Positive steering = left turn, negative = right turn",
+      "Delta under 5\u00b0 means steer 0 to avoid oscillation",
+      "Delta 5-15\u00b0 use \u00b15\u00b0; 15-30\u00b0 use \u00b110 to \u00b115\u00b0; 30-50\u00b0 use \u00b115 to \u00b120\u00b0; >50\u00b0 use \u00b125\u00b0",
+      "Near WP75-85, track curves sharply left \u2014 expect large positive delta",
+      "Speed 0.75 needed for |delta|>50\u00b0; 1.0 for 30-50\u00b0; 1.5 for <30\u00b0",
+      "Car is right of center on this left curve section \u2014 strong left correction needed",
+      "Heading near 168\u00b0 corresponds to west-northwest travel on this section",
+      "WP83 lookahead gives ~+35\u00b0 delta at this section \u2014 moderate-sharp left curve",
+      "Track continues curving left through WP78-85 section before straightening",
+      "Car has been consistently right of center \u2014 maintain strong left steering through this section"
+    ],
+    "movement_analysis": {
+      "x": [
+        1.966,
+        1.907,
+        1.86,
+        1.811
+      ],
+      "y": [
+        4.641,
+        4.649,
+        4.649,
+        4.643
+      ],
+      "yaw": [
+        158.63,
+        161.26,
+        164.1,
+        168.16
+      ]
+    },
+    "waypoint_analysis": "Target WP83 at (1.386, 4.458): dy=-0.185, dx=-0.425, bearing=-156.45\u00b0, delta=+35.4\u00b0 \u2192 moderate-sharp left, steer +20\u00b0",
+    "speed": 1.0,
+    "steering_angle": 20.0
+  },
+  "normalized_action": 11,
+  "steering_angle": 20.0,
+  "speed": 1.0,
+  "inference_time": 16.349724769592285,
+  "timestamp": "20260327-025518"
+}

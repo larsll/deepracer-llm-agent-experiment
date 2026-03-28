@@ -1,0 +1,36 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Track is a long straight ahead with car perfectly centered on the line, delta is essentially 0 so maintain full speed straight ahead.",
+    "knowledge": [
+      "Track starts with a long straight section heading in +X direction",
+      "Large right-hand curve begins around waypoint 24-30 (x\u22486.5)",
+      "Car is perfectly centered at start, delta near 0 on straight",
+      "Use steering_angle=0 on straight to avoid oscillation",
+      "After the right curve, track goes left and loops back",
+      "Track width is 0.76m \u2014 stay centered on straights for safety",
+      "Speed 1.5 is max and appropriate for straight sections"
+    ],
+    "movement_analysis": {
+      "x": [
+        3.1997,
+        3.1997
+      ],
+      "y": [
+        0.6831,
+        0.6831
+      ],
+      "yaw": [
+        0.183,
+        0.183
+      ]
+    },
+    "waypoint_analysis": -0.15,
+    "speed": 1.5,
+    "steering_angle": 0.0
+  },
+  "normalized_action": 6,
+  "steering_angle": 0.0,
+  "speed": 1.5,
+  "inference_time": 11.110312938690186,
+  "timestamp": "20260326-172636"
+}

@@ -1,0 +1,45 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Track curves right ahead, WP86 is slightly to the right (delta\u2248-8\u00b0), requiring a small right correction to stay on the waypoint line at full speed.",
+    "knowledge": [
+      "Track starts with long straight along y\u22480.683 before curving left around x=6.3-7.3.",
+      "Left curve spans WP27-44 requiring sustained positive steering ~15\u00b0.",
+      "After left curve, track straightens westward along y\u22482.77 (WP44-55).",
+      "WP55-70 region: track bends southwest with gentle-to-moderate left curve.",
+      "WP70-85 section: heading ~-165 to -170\u00b0, delta around -8 to -28\u00b0 requiring right correction.",
+      "Car consistently 0.09-0.11m left of center in WP80-86 section \u2014 no boundary concern.",
+      "Delta decreasing from -28 to -8 as car follows right curve \u2014 correction working well.",
+      "Prefer speed 1.5 on straights and gentle curves; reduce to 1.0 only when delta >45\u00b0.",
+      "WP80+ region: track curves south/southeast back toward start.",
+      "Track total 121 waypoints, ~17.7m length, car at ~68% progress."
+    ],
+    "movement_analysis": {
+      "x": [
+        1.657,
+        1.571,
+        1.457,
+        1.361
+      ],
+      "y": [
+        4.382,
+        4.366,
+        4.356,
+        4.353
+      ],
+      "heading": [
+        -165.662,
+        -166.856,
+        -168.581,
+        -170.307
+      ]
+    },
+    "waypoint_analysis": "Target WP86 at (1.114, 4.346): bearing\u2248-178.33\u00b0, delta\u2248-8.02\u00b0 \u2192 small right correction needed.",
+    "speed": 1.5,
+    "steering_angle": -5.0
+  },
+  "normalized_action": 4,
+  "steering_angle": -5.0,
+  "speed": 1.5,
+  "inference_time": 20.3174831867218,
+  "timestamp": "20260327-101257"
+}

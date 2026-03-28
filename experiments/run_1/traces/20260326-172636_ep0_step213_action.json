@@ -1,0 +1,45 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Long straight ahead but car is drifting left of center with heading 11.99\u00b0 while track bearing is -16.24\u00b0, giving delta of -28.23\u00b0 requiring a moderate right correction.",
+    "knowledge": [
+      "After waypoint 114, track runs nearly due east at y\u22480.68 \u2014 long straight ahead",
+      "Car tends to drift left of center on the straight \u2014 moderate right corrections needed",
+      "Positive delta = steer left (positive steering_angle), negative = steer right",
+      "At delta < 5\u00b0, use steering_angle=0 at speed 1.5 to avoid oscillation",
+      "Car is left of center (0.16m) \u2014 within safe bounds at track width 0.76m",
+      "Oversteer warning: once delta drops below 5\u00b0, use steering_angle=0 immediately",
+      "Track curves right (south) around waypoint 24-30 based on waypoint data",
+      "Heading has been increasing (drifting left) \u2014 need to correct back toward y\u22480.68",
+      "Previous -5\u00b0 steering was insufficient to correct the leftward drift",
+      "Delta of -28\u00b0 requires -15\u00b0 steering at speed 1.5"
+    ],
+    "movement_analysis": {
+      "x": [
+        2.238,
+        2.329,
+        2.425,
+        2.523
+      ],
+      "y": [
+        0.743,
+        0.764,
+        0.797,
+        0.839
+      ],
+      "yaw": [
+        -8.8,
+        -1.6,
+        5.6,
+        12.0
+      ]
+    },
+    "waypoint_analysis": -28.23,
+    "speed": 1.5,
+    "steering_angle": -15.0
+  },
+  "normalized_action": 2,
+  "steering_angle": -15.0,
+  "speed": 1.5,
+  "inference_time": 15.458237648010254,
+  "timestamp": "20260326-172636"
+}

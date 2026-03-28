@@ -1,0 +1,45 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Track curves gently left ahead, car is nearly perfectly aligned with WP61 (delta=-1.65\u00b0), so no steering correction needed \u2014 go straight at full speed.",
+    "knowledge": [
+      "Track curves left (southwest) from WP55-65, heading decreasing from ~145\u00b0 to ~120\u00b0",
+      "Car consistently stable near center, small corrections sufficient",
+      "Positive steering = left turn, negative = right turn",
+      "Delta under 5\u00b0 means steer 0 to avoid oscillation",
+      "After WP65-70, track curves more sharply left heading south \u2014 prepare larger left steer",
+      "Heading wraps near \u00b1180\u00b0 when traveling west \u2014 normalize delta carefully",
+      "Speed 1.5 is safe on moderate curves; reduce to 1.0 or 0.75 for sharp turns",
+      "WP58-65 marks increasing left curve heading southwest, left steering needed soon",
+      "Car has been consistently making small corrections on westward section",
+      "Oversteer warning: delta<5\u00b0 means use steering_angle=0 to avoid oscillation"
+    ],
+    "movement_analysis": {
+      "x": [
+        4.706,
+        4.641,
+        4.569,
+        4.515
+      ],
+      "y": [
+        2.815,
+        2.881,
+        2.961,
+        3.032
+      ],
+      "yaw": [
+        152.76,
+        147.24,
+        142.46,
+        138.25
+      ]
+    },
+    "waypoint_analysis": "Target WP61 at (3.877, 3.635): dy=0.603, dx=-0.638, bearing=136.6\u00b0, delta=-1.65\u00b0 \u2192 essentially straight, steer 0\u00b0",
+    "speed": 1.5,
+    "steering_angle": 0.0
+  },
+  "normalized_action": 6,
+  "steering_angle": 0.0,
+  "speed": 1.5,
+  "inference_time": 13.782665252685547,
+  "timestamp": "20260327-025518"
+}

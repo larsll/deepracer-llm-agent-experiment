@@ -1,0 +1,42 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Car is heading nearly south (-75\u00b0) but the track goes east; delta of +74\u00b0 means I need a strong left turn to realign toward the eastward waypoints ahead.",
+    "knowledge": [
+      "Positive steering = left turn (CCW), negative = right turn (CW)",
+      "Track curves right ahead but car heading is -75\u00b0 (nearly south) \u2014 need strong left correction to face east",
+      "Delta >50\u00b0 requires speed 0.75-1.0 and steering 20-25\u00b0",
+      "Car is on-track (all_wheels_on_track=true) but heading is badly misaligned",
+      "WP99 at (5.33, 2.77) is far east \u2014 need to rotate heading from -75\u00b0 toward 0\u00b0",
+      "Previous zero-steering at -9.5\u00b0 heading caused heading to drift further south to -75\u00b0",
+      "Strong left steering needed immediately to prevent going off-track right side",
+      "Track width 0.76m \u2014 limited margin for error",
+      "After realigning to ~0\u00b0 heading, reduce steering to avoid overshoot",
+      "Progress at 79% \u2014 on the curved section heading back east"
+    ],
+    "movement_analysis": {
+      "x": [
+        1.371,
+        1.467,
+        1.05
+      ],
+      "y": [
+        3.087,
+        3.092,
+        2.841
+      ],
+      "yaw": [
+        -16.08,
+        -9.52,
+        -75.15
+      ]
+    },
+    "waypoint_analysis": "Target WP99 at (5.331, 2.769): dy=-0.073, dx=4.281, bearing=-0.97\u00b0, delta=+74.18\u00b0 \u2192 strong LEFT turn needed",
+    "speed": 0.75,
+    "steering_angle": 25.0
+  },
+  "normalized_action": 12,
+  "steering_angle": 25.0,
+  "speed": 0.75,
+  "inference_time": 15.776522159576416,
+  "timestamp": "20260327-025518"
+}

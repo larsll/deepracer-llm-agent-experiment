@@ -1,0 +1,42 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Track continues southward with a slight leftward correction needed (delta +9.27\u00b0), so applying small left steering at full speed to follow the waypoint line.",
+    "knowledge": [
+      "Track curves sharply south near waypoints 91-100 (x decreasing, y decreasing)",
+      "Heading must swing from -94\u00b0 toward -85\u00b0 to follow track southward",
+      "Positive delta means steer left (positive steering_angle)",
+      "At delta ~9\u00b0, use speed=1.5 and steering=+5\u00b0 to gently correct",
+      "Car is slightly left of center \u2014 acceptable, follow waypoints not center",
+      "Track width 0.76m \u2014 narrow, maintain control through turn",
+      "After sharp right turn, waypoints continue south then loop back east",
+      "Avoid overcorrecting \u2014 once delta < 5\u00b0, reduce steering to 0\u00b0",
+      "Car is progressing through turn section (~80% progress)",
+      "all_wheels_on_track=true \u2014 car is stable on track"
+    ],
+    "movement_analysis": {
+      "x": [
+        1.011,
+        0.995,
+        0.962
+      ],
+      "y": [
+        2.793,
+        2.725,
+        2.633
+      ],
+      "yaw": [
+        -80.7,
+        -86.7,
+        -94.8
+      ]
+    },
+    "waypoint_analysis": 9.27,
+    "speed": 1.5,
+    "steering_angle": 5.0
+  },
+  "normalized_action": 8,
+  "steering_angle": 5.0,
+  "speed": 1.5,
+  "inference_time": 13.834848403930664,
+  "timestamp": "20260326-172636"
+}

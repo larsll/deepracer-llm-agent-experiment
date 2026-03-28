@@ -1,0 +1,30 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Initial state with zeroed telemetry; the image shows a track curving to the left ahead, so I'll steer left moderately to follow the curve.",
+    "knowledge": [
+      "Track curves left at start based on visual",
+      "All telemetry is zeroed at initialization \u2014 use visual cues primarily",
+      "Discrete action space: steering options are -25 to +25 in steps",
+      "Positive steering = left turn, negative = right turn"
+    ],
+    "movement_analysis": {
+      "x": [
+        0.0
+      ],
+      "y": [
+        0.0
+      ],
+      "yaw": [
+        0.0
+      ]
+    },
+    "waypoint_analysis": "Waypoint data unavailable (zeroed state); visual indicates left curve ahead, estimating delta ~+20 deg",
+    "speed": 1.5,
+    "steering_angle": 10.0
+  },
+  "normalized_action": 9,
+  "steering_angle": 10.0,
+  "speed": 1.5,
+  "inference_time": 5.430969476699829,
+  "timestamp": "20260327-025518"
+}

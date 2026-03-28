@@ -1,0 +1,45 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Track ahead is a long westward straight; waypoint delta of ~20\u00b0 left indicates a gentle left correction needed, so steering_angle=10 at speed 1.5.",
+    "knowledge": [
+      "Track has a long westward straight around waypoints 70-80, heading ~180\u00b0",
+      "Car is consistently near center and well within safe margin throughout this section",
+      "Full circuit ~17.7m, speed 1.5 is max and appropriate for moderate curves",
+      "Use steering_angle=0 for |delta| <5\u00b0 to avoid oscillation on near-straight sections",
+      "Delta near +5-10\u00b0 means gentle left correction \u2014 use steering_angle=+5",
+      "Delta near -5-10\u00b0 means gentle right correction \u2014 use steering_angle=-5",
+      "Delta near +15-25\u00b0 means moderate left correction \u2014 use steering_angle=+10",
+      "Car heading ~158\u00b0 on westward straight, track continues west then curves",
+      "Waypoints 70-80 are on the westward straight section near y=4.49",
+      "When delta drops below 5\u00b0, immediately switch to 0 steering to prevent oscillation"
+    ],
+    "movement_analysis": {
+      "x": [
+        3.023,
+        2.936,
+        2.837,
+        2.733
+      ],
+      "y": [
+        4.403,
+        4.436,
+        4.467,
+        4.495
+      ],
+      "yaw": [
+        147.052,
+        150.635,
+        154.435,
+        158.134
+      ]
+    },
+    "waypoint_analysis": 20.32,
+    "speed": 1.5,
+    "steering_angle": 10.0
+  },
+  "normalized_action": 9,
+  "steering_angle": 10.0,
+  "speed": 1.5,
+  "inference_time": 21.15168023109436,
+  "timestamp": "20260326-172636"
+}

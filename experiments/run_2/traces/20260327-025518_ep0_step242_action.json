@@ -1,0 +1,42 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Car is still far left of center (y=0.994 vs centerline y=0.683, dist=0.311m) on the gravel edge, with delta=-54\u00b0 to target waypoint requiring maximum right correction to get back onto the asphalt.",
+    "knowledge": [
+      "Positive steering = left turn (CCW), negative = right turn (CW)",
+      "Track centerline y~0.683 on this straight section; car y~0.994 means car is far left of center",
+      "Car has been persistently left of center (y: 0.956\u21920.980\u21920.994) \u2014 correction not working fast enough",
+      "When delta > 50\u00b0, use speed=0.75-1.0 and steering=-20 to -25",
+      "Track runs nearly due east for next ~20 waypoints (y stays ~0.68)",
+      "Once delta < 5\u00b0, switch to 0 steering to avoid oscillation",
+      "Track width 0.76m \u2014 very narrow, precision required",
+      "Progress 98% \u2014 nearly complete lap, stay on track at all costs",
+      "Car is on gravel/grass edge \u2014 need maximum right correction now",
+      "Delta -54\u00b0 \u2192 use steering=-25 at speed=0.75 for maximum correction"
+    ],
+    "movement_analysis": {
+      "x": [
+        2.525,
+        2.605,
+        2.704
+      ],
+      "y": [
+        0.956,
+        0.98,
+        0.994
+      ],
+      "yaw": [
+        14.06,
+        14.78,
+        12.97
+      ]
+    },
+    "waypoint_analysis": "Target WP0 at (3.060, 0.683): dy=-0.311, dx=0.356, bearing=-41.15\u00b0, delta=-54.12\u00b0 \u2192 sharp right correction needed",
+    "speed": 0.75,
+    "steering_angle": -25.0
+  },
+  "normalized_action": 0,
+  "steering_angle": -25.0,
+  "speed": 0.75,
+  "inference_time": 18.365275382995605,
+  "timestamp": "20260327-025518"
+}

@@ -1,0 +1,45 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Track curves left ahead with delta +10.4\u00b0 to waypoint 39; applying 10\u00b0 left steering at speed 1.5 to follow the curve without oversteering.",
+    "knowledge": [
+      "Track starts with a long straight section heading in +X direction along y\u22480.683",
+      "Large left-curving loop begins around waypoint 24-30 (y increases rapidly)",
+      "Car is slightly left of center (~0.24m) but all wheels on track \u2014 acceptable on inside of curve",
+      "Use steering_angle=10 for delta 10-15\u00b0 to avoid overshoot on moderate curves",
+      "After the left curve, track loops back and returns \u2014 full circuit ~17.7m",
+      "Speed 1.5 is max and appropriate for straight sections and moderate curves",
+      "Curve continues through wp33-42 (y increases from 1.7 to 2.7), delta decreasing as we progress",
+      "Car heading now ~97\u00b0 confirming we are past the peak of the left curve",
+      "Delta decreasing from ~17\u00b0 to ~10\u00b0 \u2014 curve is easing, reduce steering to avoid overshoot",
+      "Heading increasing steadily each step \u2014 curve is consistent and predictable"
+    ],
+    "movement_analysis": {
+      "x": [
+        7.0758,
+        7.0652,
+        7.0387,
+        7.0072
+      ],
+      "y": [
+        1.6676,
+        1.7487,
+        1.8563,
+        1.9409
+      ],
+      "yaw": [
+        76.991,
+        82.697,
+        90.668,
+        97.086
+      ]
+    },
+    "waypoint_analysis": 10.39,
+    "speed": 1.5,
+    "steering_angle": 10.0
+  },
+  "normalized_action": 9,
+  "steering_angle": 10.0,
+  "speed": 1.5,
+  "inference_time": 16.25357699394226,
+  "timestamp": "20260326-172636"
+}

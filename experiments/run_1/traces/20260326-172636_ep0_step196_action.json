@@ -1,0 +1,42 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Track curves right ahead with car on left side; delta of -27.5\u00b0 indicates a right turn needed, so steering -15 at speed 1.5 is appropriate for this moderate curve.",
+    "knowledge": [
+      "Track loops sharply south around waypoints 103-115 then curves back northeast",
+      "Waypoints 108-115 trend south/southeast \u2014 car must steer right significantly here",
+      "Car heading ~-42\u00b0 needs to decrease further (more negative) to follow track south",
+      "Positive delta = steer left, negative delta = steer right",
+      "At delta -25 to -35\u00b0, use steering_angle=-15 at speed 1.5",
+      "Car is left of center \u2014 track curving right confirms right steering needed",
+      "After waypoint 115, track begins heading northeast \u2014 watch for left turn",
+      "Avoid oversteer oscillation on straights; use smallest valid angle when delta < 10\u00b0",
+      "Track width ~0.76m, car is 0.20m left of center \u2014 within safe bounds",
+      "Previous -20 steering at delta -38.6\u00b0 was appropriate; now delta reduced to -27.5\u00b0"
+    ],
+    "movement_analysis": {
+      "x": [
+        1.304,
+        1.369,
+        1.41
+      ],
+      "y": [
+        1.328,
+        1.273,
+        1.231
+      ],
+      "yaw": [
+        -42.0,
+        -41.7,
+        -42.4
+      ]
+    },
+    "waypoint_analysis": -27.5,
+    "speed": 1.5,
+    "steering_angle": -15.0
+  },
+  "normalized_action": 2,
+  "steering_angle": -15.0,
+  "speed": 1.5,
+  "inference_time": 14.381712198257446,
+  "timestamp": "20260326-172636"
+}

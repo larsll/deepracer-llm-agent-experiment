@@ -1,0 +1,45 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Track curves left ahead but waypoint 67 is slightly right of current heading (delta=-5.42\u00b0), so a small -5\u00b0 steering correction keeps the car on the waypoint line.",
+    "knowledge": [
+      "Track has a left-curving section around waypoints 55-70, heading southwest",
+      "Car is consistently slightly right of center (~0.05-0.12m) but within safe margin",
+      "Full circuit ~17.7m, speed 1.5 is max and appropriate for moderate curves",
+      "Use steering_angle=0 for |delta| <5\u00b0 to avoid oscillation on near-straight sections",
+      "Delta near -5 to -9\u00b0 means gentle right correction \u2014 use steering_angle=-5",
+      "Delta near +5 to +9\u00b0 means gentle left correction \u2014 use steering_angle=+5",
+      "Car is maintaining 1.5 speed well through this section",
+      "Waypoints 62-70 show continuing left curve (southwest to west)",
+      "5\u00b0 steering is appropriate for delta 5-10\u00b0 range to avoid overshoot",
+      "When delta drops below 5\u00b0, immediately switch to 0 steering to prevent oscillation"
+    ],
+    "movement_analysis": {
+      "x": [
+        4.133,
+        4.055,
+        3.976,
+        3.908
+      ],
+      "y": [
+        3.5094,
+        3.5685,
+        3.6305,
+        3.6867
+      ],
+      "yaw": [
+        141.698,
+        141.858,
+        141.781,
+        141.557
+      ]
+    },
+    "waypoint_analysis": -5.42,
+    "speed": 1.5,
+    "steering_angle": -5.0
+  },
+  "normalized_action": 4,
+  "steering_angle": -5.0,
+  "speed": 1.5,
+  "inference_time": 14.8975191116333,
+  "timestamp": "20260326-172636"
+}

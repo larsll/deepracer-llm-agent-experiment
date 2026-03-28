@@ -1,0 +1,42 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Track curves sharply right ahead with car left of center; waypoint delta is -45.5\u00b0 requiring strong right steering at moderate speed.",
+    "knowledge": [
+      "Track total 121 waypoints, ~17.7m length.",
+      "WP0-20: long straight along y\u22480.683 heading east.",
+      "WP24-44: left curve from east to west, requires sustained positive steering.",
+      "WP44-55: straight westward along y\u22482.77.",
+      "WP82-96: sharp south/southeast curve \u2014 large positive delta, need max left steering.",
+      "WP92-98: heading ~-45\u00b0 to -90\u00b0, track curves right (south), delta around -45\u00b0.",
+      "After WP98, track continues curving south then southwest \u2014 heading becomes more negative.",
+      "Car consistently slightly left of center (~0.10-0.15m) in WP92-93 region.",
+      "Prefer speed 1.0 when |delta|>30\u00b0 on curves; reduce to 0.75 only if |delta|>50\u00b0.",
+      "Right edge (white line) visible in image confirms rightward curve \u2014 steer right."
+    ],
+    "movement_analysis": {
+      "x": [
+        0.833,
+        0.916,
+        0.978
+      ],
+      "y": [
+        3.045,
+        2.984,
+        2.926
+      ],
+      "heading": [
+        -49.636,
+        -45.597,
+        -44.979
+      ]
+    },
+    "waypoint_analysis": "Target WP98 at (0.973, 2.252): bearing\u2248-90.4\u00b0, delta\u2248-45.5\u00b0 \u2192 strong right correction needed.",
+    "speed": 1.0,
+    "steering_angle": -20.0
+  },
+  "normalized_action": 1,
+  "steering_angle": -20.0,
+  "speed": 1.0,
+  "inference_time": 18.01454734802246,
+  "timestamp": "20260327-101257"
+}

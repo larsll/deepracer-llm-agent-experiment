@@ -1,0 +1,48 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Car remains frozen at x=0.5307, y=3.7724, heading=-102.25\u00b0 with delta=+92.43\u00b0 requiring hard left turn; continuing max left steering at minimum speed to attempt to get moving.",
+    "knowledge": [
+      "Positive steering = left turn, negative = right turn",
+      "Car has been stuck at x=0.53, y=3.77 heading=-102\u00b0 for many consecutive steps \u2014 possible simulation issue",
+      "Target WP92 gives delta ~+92\u00b0 \u2014 hard left needed to realign heading toward eastward track",
+      "Track curves left (east) ahead \u2014 waypoints go from x=0.5 to x=6+ eastward",
+      "Speed 0.75 for |delta|>50\u00b0; 1.0 for 30-50\u00b0; 1.5 for <30\u00b0",
+      "After heading swings past -50\u00b0, reduce steering to avoid overshoot",
+      "Track width ~0.76m, car is right of center",
+      "Progress stuck at 73.7% \u2014 car has not advanced in many steps",
+      "Continue max left steering until heading aligns with eastward track direction",
+      "Once moving, target heading should be around -10\u00b0 to follow eastward waypoints"
+    ],
+    "movement_analysis": {
+      "x": [
+        0.535,
+        0.531,
+        0.531,
+        0.531,
+        0.531
+      ],
+      "y": [
+        3.746,
+        3.772,
+        3.772,
+        3.772,
+        3.772
+      ],
+      "yaw": [
+        -100.48,
+        -102.25,
+        -102.25,
+        -102.25,
+        -102.25
+      ]
+    },
+    "waypoint_analysis": "Target WP92 at (6.381, 2.760): dy=-1.013, dx=5.850, bearing=-9.82\u00b0, delta=+92.43\u00b0 \u2192 steer hard LEFT",
+    "speed": 0.75,
+    "steering_angle": 25.0
+  },
+  "normalized_action": 12,
+  "steering_angle": 25.0,
+  "speed": 0.75,
+  "inference_time": 16.17162036895752,
+  "timestamp": "20260327-025518"
+}

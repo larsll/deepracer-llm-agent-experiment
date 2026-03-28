@@ -1,0 +1,42 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Track curves gently left ahead, car is nearly centered (0.007m from center), delta of +7.4\u00b0 to WP79 indicates slight left correction needed, so applying +5\u00b0 steering at full speed.",
+    "knowledge": [
+      "Positive steering = left turn, negative = right turn",
+      "Delta under 5\u00b0 means steer 0 to avoid oscillation",
+      "Delta 5-15\u00b0 use \u00b15\u00b0; 15-30\u00b0 use \u00b110 to \u00b115\u00b0; 30-50\u00b0 use \u00b115 to \u00b120\u00b0",
+      "Near WP73-80, track runs nearly due west with very small deltas",
+      "Speed 1.5 safe on straight/gentle curve sections",
+      "Car is very close to center (~0.007m) \u2014 avoid overcorrecting",
+      "Heading near 163-166\u00b0 corresponds to west-northwest travel",
+      "WP79 lookahead gives small positive delta at this section \u2014 gentle left curve",
+      "Oversteer warning: avoid excessive correction when near track center",
+      "Track curves left after WP74, small positive steering sufficient"
+    ],
+    "movement_analysis": {
+      "x": [
+        2.519,
+        2.423,
+        2.323
+      ],
+      "y": [
+        4.42,
+        4.447,
+        4.487
+      ],
+      "yaw": [
+        166.15,
+        165.79,
+        163.17
+      ]
+    },
+    "waypoint_analysis": "Target WP79 at (2.289, 4.493): dy=0.006, dx=-0.034, bearing=170.6\u00b0, delta=+7.4\u00b0 \u2192 slight left, steer +5\u00b0",
+    "speed": 1.5,
+    "steering_angle": 5.0
+  },
+  "normalized_action": 8,
+  "steering_angle": 5.0,
+  "speed": 1.5,
+  "inference_time": 15.370161056518555,
+  "timestamp": "20260327-025518"
+}

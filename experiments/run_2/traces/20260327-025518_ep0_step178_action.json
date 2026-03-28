@@ -1,0 +1,45 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Car heading is -58.32\u00b0 while WP101 is nearly due east, giving delta +60.95\u00b0; maintaining maximum left steering at minimum speed to continue rotating heading toward east.",
+    "knowledge": [
+      "Positive steering = left turn (CCW), negative = right turn (CW)",
+      "Car heading near -58\u00b0 \u2014 needs strong left correction to face east (~0\u00b0)",
+      "Delta >50\u00b0 requires speed 0.75 and steering 25\u00b0 (max left)",
+      "Heading improving ~3-4\u00b0 per step with max left steering at 0.75 speed",
+      "WP101 at (5.03, 2.77) is far east \u2014 need to rotate heading from -58\u00b0 toward 0\u00b0",
+      "Track width 0.76m \u2014 car is 0.33m left of center, near edge but on track",
+      "all_wheels_on_track=false warning \u2014 car is slightly off track left edge",
+      "Once heading reaches ~0\u00b0, reduce steering to avoid overshoot",
+      "Track curves right further ahead \u2014 after realigning, will need right steering",
+      "Need ~15 more steps at 4\u00b0/step to reach heading 0\u00b0 \u2014 maintain max left steering"
+    ],
+    "movement_analysis": {
+      "x": [
+        1.128,
+        1.159,
+        1.206,
+        1.244
+      ],
+      "y": [
+        2.696,
+        2.663,
+        2.621,
+        2.592
+      ],
+      "yaw": [
+        -70.51,
+        -67.17,
+        -61.81,
+        -58.32
+      ]
+    },
+    "waypoint_analysis": "Target WP101 at (5.031, 2.766): dy=+0.174, dx=3.788, bearing=+2.63\u00b0, delta=+60.95\u00b0 \u2192 strong LEFT turn needed",
+    "speed": 0.75,
+    "steering_angle": 25.0
+  },
+  "normalized_action": 12,
+  "steering_angle": 25.0,
+  "speed": 0.75,
+  "inference_time": 14.959612369537354,
+  "timestamp": "20260327-025518"
+}

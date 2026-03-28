@@ -1,0 +1,48 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Car is still off-track on left grass with heading -66.99\u00b0 but target waypoint 94 bears -7.91\u00b0, giving delta +59.08\u00b0 \u2014 must maintain maximum left steering at low speed to continue rotating CCW to align with the eastward track.",
+    "knowledge": [
+      "Car has been off-track left side for many steps near x=1.07-1.11, y=3.46-3.50",
+      "Track runs roughly east (positive X) near waypoints 89-95",
+      "Large positive delta (~59\u00b0) still requires maximum left steering (25\u00b0) at low speed (0.75)",
+      "Heading slowly improving: -103\u00b0 \u2192 -86\u00b0 \u2192 -77\u00b0 \u2192 -72.77\u00b0 \u2192 -66.99\u00b0 \u2014 trend correct, keep max left steer",
+      "is_left_of_center=true and off-track \u2014 car is on left grass, road is to the right in image",
+      "Track width 0.76m \u2014 very narrow, recovery must be gradual to avoid overshooting",
+      "Once delta < 50\u00b0, reduce to steering=20\u00b0 and increase speed to 1.0",
+      "Once delta < 30\u00b0, use steering=15\u00b0 and speed=1.5",
+      "Progress ~75.3% near waypoints 88-89, not advancing much \u2014 need to get back on track urgently",
+      "Car is rotating CCW (heading increasing toward 0\u00b0) which is correct direction"
+    ],
+    "movement_analysis": {
+      "x": [
+        1.009,
+        1.034,
+        1.034,
+        1.071,
+        1.112
+      ],
+      "y": [
+        3.58,
+        3.543,
+        3.543,
+        3.5,
+        3.463
+      ],
+      "yaw": [
+        -80.695,
+        -77.258,
+        -77.258,
+        -72.773,
+        -66.994
+      ]
+    },
+    "waypoint_analysis": 59.08,
+    "speed": 0.75,
+    "steering_angle": 25.0
+  },
+  "normalized_action": 12,
+  "steering_angle": 25.0,
+  "speed": 0.75,
+  "inference_time": 15.64605450630188,
+  "timestamp": "20260326-172636"
+}

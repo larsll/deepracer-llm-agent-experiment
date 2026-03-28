@@ -1,0 +1,45 @@
+{
+  "raw_action_dict": {
+    "reasoning": "WP77 is nearly dead ahead with delta only +2.4\u00b0, so the car is well aligned on the westward straight; applying zero steering at full speed.",
+    "knowledge": [
+      "Positive steering = left turn, negative = right turn",
+      "Delta under 5\u00b0 means steer 0 to avoid oscillation",
+      "Delta 5-15\u00b0 use \u00b15\u00b0; 15-30\u00b0 use \u00b110 to \u00b115\u00b0; 30-50\u00b0 use \u00b115 to \u00b120\u00b0",
+      "After WP70, track runs nearly due west \u2014 delta becomes very small near WP72-80",
+      "Speed 1.5 safe on straight sections; reduce to 1.0 for |delta| 30-50\u00b0",
+      "Car is slightly left of center on the westward section but all wheels on track",
+      "Heading near 166\u00b0 corresponds to west-northwest travel along this segment",
+      "WP77 area is a near-straight westward run \u2014 minimal steering needed",
+      "Oversteer warning: avoid excessive correction when near track center",
+      "Track curves left (south) after WP80 area \u2014 prepare for left turn"
+    ],
+    "movement_analysis": {
+      "x": [
+        3.095,
+        2.991,
+        2.896,
+        2.791
+      ],
+      "y": [
+        4.31,
+        4.331,
+        4.343,
+        4.357
+      ],
+      "yaw": [
+        153.08,
+        158.55,
+        162.96,
+        166.1
+      ]
+    },
+    "waypoint_analysis": "Target WP77 at (2.144, 4.488): dy=0.131, dx=-0.646, bearing=168.5\u00b0, delta=+2.4\u00b0 \u2192 nearly straight, steer 0",
+    "speed": 1.5,
+    "steering_angle": 0.0
+  },
+  "normalized_action": 6,
+  "steering_angle": 0.0,
+  "speed": 1.5,
+  "inference_time": 16.329344511032104,
+  "timestamp": "20260327-025518"
+}

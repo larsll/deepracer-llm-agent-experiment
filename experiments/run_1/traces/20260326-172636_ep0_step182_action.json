@@ -1,0 +1,48 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Track curves sharply left ahead with car near right edge; waypoint 105 is to the upper-right with delta +57\u00b0, requiring sharp left steering to follow the loop back northeast.",
+    "knowledge": [
+      "Track loops sharply south then back northeast around waypoints 95-110",
+      "Positive delta means steer left (positive steering_angle)",
+      "At delta > 50\u00b0, use speed=1.0 and steering=+20\u00b0 to stay on track",
+      "Car is right of center near gravel \u2014 follow waypoints to pull back left",
+      "Track width 0.76m \u2014 narrow, maintain control through turns",
+      "After southward section, waypoints loop back east then north",
+      "Avoid overcorrecting \u2014 once delta < 5\u00b0, reduce steering to 0\u00b0",
+      "Car heading around -95\u00b0 (south), needs to swing toward -38\u00b0 (southeast)",
+      "Progress at 83.9% \u2014 approaching final section of lap, stay smooth",
+      "Sharp left correction needed for several turns to follow the loop back"
+    ],
+    "movement_analysis": {
+      "x": [
+        0.776,
+        0.776,
+        0.779,
+        0.788,
+        0.788
+      ],
+      "y": [
+        2.054,
+        2.054,
+        1.965,
+        1.906,
+        1.906
+      ],
+      "yaw": [
+        -103.5,
+        -103.5,
+        -99.2,
+        -95.4,
+        -95.4
+      ]
+    },
+    "waypoint_analysis": 57.31,
+    "speed": 1.0,
+    "steering_angle": 20.0
+  },
+  "normalized_action": 11,
+  "steering_angle": 20.0,
+  "speed": 1.0,
+  "inference_time": 15.243518352508545,
+  "timestamp": "20260326-172636"
+}

@@ -1,0 +1,45 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Car is off-track to the left with delta of ~+4.9\u00b0 meaning nearly aligned with target waypoint; heading straight with no steering to avoid oscillation and let the car naturally return toward the track.",
+    "knowledge": [
+      "Positive steering = left turn, negative = right turn",
+      "Car has been off-track left for several steps \u2014 heading is slowly correcting eastward",
+      "Delta ~+5\u00b0 means nearly aligned with WP98 \u2014 use minimal or zero steering",
+      "Track is narrow (0.76m) \u2014 oversteer causes oscillation and extended off-track time",
+      "Car heading improved: -44\u00b0 \u2192 -16\u00b0 \u2192 -9.5\u00b0, nearly aligned east",
+      "is_offtrack=true but not crashed \u2014 continue gentle correction toward track",
+      "WP98 at (5.48, 2.77) is far ahead east-southeast \u2014 maintain eastward heading",
+      "Speed 1.5 appropriate when |delta| < 15\u00b0",
+      "After returning to track, reduce steering corrections to avoid weaving",
+      "Progress stalled at 78.3% \u2014 need to return to track quickly"
+    ],
+    "movement_analysis": {
+      "x": [
+        1.195,
+        1.27,
+        1.371,
+        1.467
+      ],
+      "y": [
+        3.101,
+        3.088,
+        3.087,
+        3.092
+      ],
+      "yaw": [
+        -28.81,
+        -24.05,
+        -16.08,
+        -9.52
+      ]
+    },
+    "waypoint_analysis": "Target WP98 at (5.480, 2.769): dy=-0.323, dx=4.014, bearing=-4.61\u00b0, delta=+4.91\u00b0 \u2192 nearly straight, minimal left",
+    "speed": 1.5,
+    "steering_angle": 0.0
+  },
+  "normalized_action": 6,
+  "steering_angle": 0.0,
+  "speed": 1.5,
+  "inference_time": 16.5315101146698,
+  "timestamp": "20260327-025518"
+}

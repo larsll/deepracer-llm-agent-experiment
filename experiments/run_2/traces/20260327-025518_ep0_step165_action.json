@@ -1,0 +1,45 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Delta of +11.66\u00b0 means the target waypoint is slightly to the left; applying small left steering at speed 1.5 to continue aligning toward the track center while heading improves.",
+    "knowledge": [
+      "Positive steering = left turn, negative = right turn",
+      "Car heading slowly improving: -44\u00b0 \u2192 -33\u00b0 \u2192 -24\u00b0 \u2192 -16\u00b0, aligning eastward",
+      "Target WP98 gives delta ~+12\u00b0 \u2014 small left correction still needed",
+      "Track goes east from current position; waypoints run eastward then curve south",
+      "Speed 0.75 for |delta|>50\u00b0; 1.0 for 30-50\u00b0; 1.5 for <30\u00b0",
+      "After heading swings past -5\u00b0, reduce steering to avoid overshoot",
+      "Car is 0.57m left of center \u2014 significantly off track left edge, heading correction will bring it back",
+      "all_wheels_on_track=false \u2014 car slightly off but not crashed, continuing correction",
+      "Track width 0.76m \u2014 narrow, stay near center once heading aligns",
+      "Progress at 78.2% \u2014 continuing eastward section of track"
+    ],
+    "movement_analysis": {
+      "x": [
+        1.13,
+        1.195,
+        1.27,
+        1.371
+      ],
+      "y": [
+        3.114,
+        3.101,
+        3.088,
+        3.087
+      ],
+      "yaw": [
+        -33.68,
+        -28.81,
+        -24.05,
+        -16.08
+      ]
+    },
+    "waypoint_analysis": "Target WP98 at (5.480, 2.769): dy=-0.318, dx=4.110, bearing=-4.42\u00b0, delta=+11.66\u00b0 \u2192 steer LEFT",
+    "speed": 1.5,
+    "steering_angle": 5.0
+  },
+  "normalized_action": 8,
+  "steering_angle": 5.0,
+  "speed": 1.5,
+  "inference_time": 16.229063987731934,
+  "timestamp": "20260327-025518"
+}

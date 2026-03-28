@@ -1,0 +1,45 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Car is off-track (is_offtrack=true) with heading -31.92\u00b0 and WP102 bearing +5.58\u00b0 giving delta +37.5\u00b0; maintaining maximum left steering at low speed to rotate heading toward east and return to track.",
+    "knowledge": [
+      "Positive steering = left turn (CCW), negative = right turn (CW)",
+      "Car is currently off-track (is_offtrack=true) \u2014 need to return to track urgently",
+      "Car heading near -32\u00b0 \u2014 needs continued left correction to face east (~0\u00b0)",
+      "Delta ~37\u00b0 requires speed 0.75 and steering 25\u00b0 (strong left)",
+      "Heading improving ~3-4\u00b0 per step with max left steering at 0.75 speed",
+      "WP102 at (4.88, 2.78) is far east \u2014 need to rotate heading from -32\u00b0 toward 0\u00b0",
+      "Once heading reaches ~0\u00b0, reduce steering to avoid overshoot",
+      "Track curves right further ahead \u2014 after realigning, will need right steering",
+      "Progress at 81.75% \u2014 completing final section of lap",
+      "Car is left of center and off-track \u2014 need rightward drift while turning left to re-enter"
+    ],
+    "movement_analysis": {
+      "x": [
+        1.416,
+        1.479,
+        1.529,
+        1.567
+      ],
+      "y": [
+        2.5,
+        2.479,
+        2.467,
+        2.461
+      ],
+      "yaw": [
+        -44.5,
+        -38.73,
+        -34.47,
+        -31.92
+      ]
+    },
+    "waypoint_analysis": "Target WP102 at (4.882, 2.785): dy=+0.324, dx=3.316, bearing=+5.58\u00b0, delta=+37.50\u00b0 \u2192 strong LEFT turn needed",
+    "speed": 0.75,
+    "steering_angle": 25.0
+  },
+  "normalized_action": 12,
+  "steering_angle": 25.0,
+  "speed": 0.75,
+  "inference_time": 15.433608531951904,
+  "timestamp": "20260327-025518"
+}

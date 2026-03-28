@@ -1,0 +1,48 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Car is confirmed off-track (is_offtrack=true) with heading 129\u00b0 while target waypoint bearing is -27\u00b0, requiring maximum right steering at minimum speed to recover alignment.",
+    "knowledge": [
+      "Car has been off-track for many steps \u2014 is_offtrack=true confirmed at step 121",
+      "Heading decreasing slowly: 169\u2192152\u2192144\u2192137\u2192133\u2192129 \u2014 right turn working but very slow",
+      "Must maintain maximum right steering (-25) at low speed (0.75) until heading reaches ~-27\u00b0",
+      "Target heading is approximately -27\u00b0 (east-southeast) to realign with track",
+      "Car is far left of track center (is_left_of_center=false, distance=0.628 with width=0.762)",
+      "Visual shows uniform green \u2014 car is off the track surface entirely",
+      "Need heading to drop by ~156\u00b0 more \u2014 will take many more steps at current rate",
+      "Progress stalled at 66.77% \u2014 car not advancing along track while off-track",
+      "Car position drifting slightly: x decreasing, y increasing \u2014 moving further from track",
+      "Simulator may reset car if off-track persists \u2014 continue max right steer regardless"
+    ],
+    "movement_analysis": {
+      "x": [
+        1.602,
+        1.578,
+        1.578,
+        1.558,
+        1.539
+      ],
+      "y": [
+        4.957,
+        5.001,
+        5.001,
+        5.045,
+        5.098
+      ],
+      "yaw": [
+        139.971,
+        136.553,
+        136.553,
+        133.138,
+        129.4
+      ]
+    },
+    "waypoint_analysis": -156.5,
+    "speed": 0.75,
+    "steering_angle": -25.0
+  },
+  "normalized_action": 0,
+  "steering_angle": -25.0,
+  "speed": 0.75,
+  "inference_time": 15.961575269699097,
+  "timestamp": "20260326-172636"
+}

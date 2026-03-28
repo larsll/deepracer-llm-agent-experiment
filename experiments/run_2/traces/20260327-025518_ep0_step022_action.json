@@ -1,0 +1,48 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Track is straight ahead with a gentle right curve beginning in the distance; delta to target waypoint is ~3.7\u00b0, under 5\u00b0, so maintain full speed with zero steering.",
+    "knowledge": [
+      "Track starts with a long straight section heading due east (~0\u00b0 heading)",
+      "Car is nearly perfectly centered on track at start",
+      "Waypoints show a large loop: straight east, then curve right/south, then back west",
+      "At ~waypoint 25-35, track curves sharply right (south then west)",
+      "Positive steering = left turn, negative = right turn",
+      "On straights, use steering_angle=0 to avoid oscillation",
+      "Track width is ~0.76m",
+      "Large right-hand curve begins around x=6.5-7.0 based on waypoints",
+      "After the right curve, track goes west around y=2.7-4.5 then loops back",
+      "Speed 1.5 is safe on straights; reduce to 1.0 or 0.75 for sharp turns"
+    ],
+    "movement_analysis": {
+      "x": [
+        4.7177,
+        4.812,
+        4.8568,
+        4.9124,
+        5.0189
+      ],
+      "y": [
+        0.6572,
+        0.6549,
+        0.6539,
+        0.652,
+        0.6497
+      ],
+      "yaw": [
+        -1.251,
+        -1.37,
+        -1.45,
+        -1.518,
+        -1.498
+      ]
+    },
+    "waypoint_analysis": "Target WP19 at (5.905, 0.684): dy=0.034, dx=0.886, bearing=2.19\u00b0, delta=+3.69\u00b0 \u2192 essentially straight, no correction needed",
+    "speed": 1.5,
+    "steering_angle": 0.0
+  },
+  "normalized_action": 6,
+  "steering_angle": 0.0,
+  "speed": 1.5,
+  "inference_time": 14.46837830543518,
+  "timestamp": "20260327-025518"
+}

@@ -1,0 +1,45 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Delta of +47.28\u00b0 means the target waypoint is still significantly to the left of current heading, so I need hard left steering at reduced speed to continue aligning with the eastward track direction.",
+    "knowledge": [
+      "Positive steering = left turn, negative = right turn",
+      "Car slowly turning left: heading improving from -83\u00b0 toward -52\u00b0 over last several steps",
+      "Target WP96 gives delta ~+47\u00b0 \u2014 hard left still needed to realign heading toward eastward track",
+      "Track goes east from current position; waypoints run from x=0.5 to x=6+ eastward",
+      "Speed 0.75 for |delta|>50\u00b0; 1.0 for 30-50\u00b0; 1.5 for <30\u00b0",
+      "After heading swings past -20\u00b0, reduce steering to avoid overshoot",
+      "Car is 0.136m left of center \u2014 acceptable but should drift right as heading corrects",
+      "Continue max left steering until heading aligns with eastward track direction (~-10\u00b0)",
+      "Progress at 76.9% \u2014 car is slow but all wheels on track",
+      "Track width is 0.76m \u2014 narrow track, stay near center"
+    ],
+    "movement_analysis": {
+      "x": [
+        0.765,
+        0.807,
+        0.85,
+        0.893
+      ],
+      "y": [
+        3.295,
+        3.263,
+        3.236,
+        3.209
+      ],
+      "yaw": [
+        -65.04,
+        -60.35,
+        -56.05,
+        -52.41
+      ]
+    },
+    "waypoint_analysis": "Target WP96 at (5.780, 2.771): dy=-0.439, dx=4.887, bearing=-5.13\u00b0, delta=+47.28\u00b0 \u2192 steer hard LEFT",
+    "speed": 1.0,
+    "steering_angle": 20.0
+  },
+  "normalized_action": 11,
+  "steering_angle": 20.0,
+  "speed": 1.0,
+  "inference_time": 15.637120723724365,
+  "timestamp": "20260327-025518"
+}

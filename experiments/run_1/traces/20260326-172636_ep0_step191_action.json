@@ -1,0 +1,42 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Car has progressed past waypoint 108 and is now near waypoint 109; delta to next waypoint is about -6\u00b0 (slightly right), so apply minimal right steering at moderate speed.",
+    "knowledge": [
+      "Track loops sharply south then back northeast around waypoints 95-110",
+      "Positive delta means steer left (positive steering_angle), negative means steer right",
+      "Car heading has improved from -79\u00b0 to -54\u00b0 through the bottom turn",
+      "After waypoint 108, track begins curving back northeast/north",
+      "At delta < 10\u00b0, use smallest steering correction to avoid oscillation",
+      "Progress at 86.8% \u2014 exiting tight bottom turn, can increase speed soon",
+      "Waypoints 109-115 trend northeast then north along the left side",
+      "Once delta near zero, go straight at 1.5 speed",
+      "Watch for oversteer \u2014 heading improved rapidly, reduce steering now",
+      "Car is right of center (is_left_of_center=false) \u2014 track straightening ahead"
+    ],
+    "movement_analysis": {
+      "x": [
+        1.034,
+        1.062,
+        1.115
+      ],
+      "y": [
+        1.509,
+        1.484,
+        1.446
+      ],
+      "yaw": [
+        -61.0,
+        -58.8,
+        -54.3
+      ]
+    },
+    "waypoint_analysis": -6.1,
+    "speed": 1.5,
+    "steering_angle": -5.0
+  },
+  "normalized_action": 4,
+  "steering_angle": -5.0,
+  "speed": 1.5,
+  "inference_time": 15.89810848236084,
+  "timestamp": "20260326-172636"
+}

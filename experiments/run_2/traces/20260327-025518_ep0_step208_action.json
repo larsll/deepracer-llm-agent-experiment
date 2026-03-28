@@ -1,0 +1,48 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Track curves right ahead but waypoints run east at y~0.68 while car is at y=1.65 heading south at -77\u00b0; delta=+58.71\u00b0 requires hard left steering to rotate car eastward to follow the track.",
+    "knowledge": [
+      "Positive steering = left turn (CCW), negative = right turn (CW)",
+      "Car was stuck but IS moving slowly \u2014 x=1.300, y=1.650, progress 85.93%",
+      "Delta ~+59\u00b0 requires speed 0.75 and steering 25\u00b0 (hard left)",
+      "Track at this section runs roughly east (waypoints y~0.68, increasing x)",
+      "Car heading ~-77\u00b0 is too far south, needs to rotate to ~-18\u00b0 to follow track",
+      "Once heading reaches ~-20\u00b0 to -10\u00b0, reduce steering to avoid overshoot",
+      "is_left_of_center=true, 0.198m from center \u2014 slightly left but within track",
+      "Car moving ~0.013m per step at 0.75 speed \u2014 very slow but progressing",
+      "Keep speed at 0.75 and steering 25\u00b0 until heading improves significantly",
+      "Track width 0.762m \u2014 narrow, stay near center once heading corrected"
+    ],
+    "movement_analysis": {
+      "x": [
+        1.294,
+        1.287,
+        1.287,
+        1.287,
+        1.3
+      ],
+      "y": [
+        1.665,
+        1.674,
+        1.674,
+        1.674,
+        1.65
+      ],
+      "yaw": [
+        -77.54,
+        -78.28,
+        -78.28,
+        -78.28,
+        -76.81
+      ]
+    },
+    "waypoint_analysis": "Target WP107 at (4.258, 0.684): dy=-0.967, dx=2.958, bearing=-18.10\u00b0, delta=+58.71\u00b0 \u2192 hard LEFT turn needed",
+    "speed": 0.75,
+    "steering_angle": 25.0
+  },
+  "normalized_action": 12,
+  "steering_angle": 25.0,
+  "speed": 0.75,
+  "inference_time": 17.235618352890015,
+  "timestamp": "20260327-025518"
+}

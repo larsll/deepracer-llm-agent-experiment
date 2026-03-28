@@ -1,0 +1,42 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Track curves gently left ahead but WP74 bearing gives delta of -5.08\u00b0 (slight right), so a small right correction of -5\u00b0 at speed 1.5 is appropriate to stay on the waypoint line.",
+    "knowledge": [
+      "Track curves left (southwest) from WP55-75, heading ~130-165\u00b0",
+      "Positive steering = left turn, negative = right turn",
+      "Delta under 5\u00b0 means steer 0 to avoid oscillation",
+      "Delta 5-15\u00b0 use steering \u00b15\u00b0; 15-30\u00b0 use \u00b110 to \u00b115\u00b0",
+      "After WP75, track continues west then curves north \u2014 prepare for heading changes",
+      "Speed 1.5 is safe on moderate curves; reduce to 1.0 or 0.75 for sharp turns",
+      "Car has been slightly left of center on southwest section \u2014 small right corrections needed",
+      "Heading wraps near \u00b1180\u00b0 when traveling west \u2014 normalize delta carefully",
+      "WP74 is at (2.798, 4.495), bearing ~148\u00b0 from current position",
+      "Previous +15\u00b0 steer was too aggressive for this section \u2014 delta was only ~17\u00b0, now near 0"
+    ],
+    "movement_analysis": {
+      "x": [
+        3.286,
+        3.177,
+        3.095
+      ],
+      "y": [
+        4.241,
+        4.285,
+        4.31
+      ],
+      "yaw": [
+        144.52,
+        149.22,
+        153.08
+      ]
+    },
+    "waypoint_analysis": "Target WP74 at (2.798, 4.495): dy=0.186, dx=-0.297, bearing=148.0\u00b0, delta=-5.08\u00b0 \u2192 slight right, steer -5\u00b0",
+    "speed": 1.5,
+    "steering_angle": -5.0
+  },
+  "normalized_action": 4,
+  "steering_angle": -5.0,
+  "speed": 1.5,
+  "inference_time": 15.258021831512451,
+  "timestamp": "20260327-025518"
+}

@@ -1,0 +1,54 @@
+{
+  "model_id": "eu.anthropic.claude-sonnet-4-6",
+  "request_body": {
+    "anthropic_version": "bedrock-2023-05-31",
+    "max_tokens": 10000,
+    "temperature": 0.3,
+    "top_k": 0,
+    "system": "You are an autonomous racing driver controlling an AWS DeepRacer 1/18th scale car.\nEach turn you receive: (1) a front-facing camera image, (2) car state JSON with position, heading, waypoints and action space, and (3) your own previous response.\nPRIMARY OBJECTIVE: Stay on the track. SECONDARY OBJECTIVE: Complete laps as fast as possible.\n\nHEADING AND STEERING CONVENTION:\n  - Heading is measured in degrees counter-clockwise from the positive X-axis (standard math convention).\n  - heading=0 means the car faces right (+X). heading=90 means the car faces up (+Y). heading=180/-180 faces left (-X, due west). heading=-90 faces down (-Y).\n  - Heading wraps at due west: turning left past +180 jumps to -180, and turning right past -180 jumps to +180. The range is (-180, +180].\n  - A POSITIVE steering_angle INCREASES heading (turns the car counter-clockwise = LEFT from the driver's perspective).\n  - A NEGATIVE steering_angle DECREASES heading (turns the car clockwise = RIGHT from the driver's perspective).\n  - VERIFY: To turn LEFT in the image, use a POSITIVE steering_angle. To turn RIGHT in the image, use a NEGATIVE steering_angle.\n  - VERIFY: Use waypoint_analysis delta to determine steering direction, NOT distance_from_center. Positive delta = steer left (positive steering_angle). Negative delta = steer right (negative steering_angle).\n\nVISUAL ANALYSIS: Look at the image first. Identify: (a) track boundaries left and right, (b) curvature and direction of the track ahead, (c) how far the car is from each edge. Do NOT attempt to drive toward the center \u2014 follow the waypoint line instead.\nWAYPOINT ANALYSIS: Identify the waypoint at index (nearest_waypoints[1] + 5) % total_waypoints. Compute the bearing to that waypoint: bearing = atan2(waypoint.y - car.y, waypoint.x - car.x), converted to degrees. Then compute delta = bearing - current_heading, normalized to (-180, +180] by adding or subtracting 360 as needed. A positive delta means the target waypoint is to the LEFT \u2014 use a positive steering_angle. A negative delta means it is to the RIGHT \u2014 use a negative steering_angle. Store this delta in the \"waypoint_analysis\" field.\n\nACTION SELECTION RULES (use waypoint_analysis delta to select steering, not distance_from_center):\n  - |delta| < 5 deg: speed=1.5, steering_angle=0 \u2014 already on line, do not correct\n  - |delta| 5-15 deg: speed=1.5, |steering_angle|=5 \u2014 if |delta| is near 5 deg prefer 2.5 to avoid overshoot\n  - |delta| 15-30 deg: speed=1.5, |steering_angle|=10 to 15\n  - |delta| 30-50 deg: speed=1.0 to 1.5, |steering_angle|=15 to 20\n  - |delta| > 50 deg (sharp turn): speed=0.75 to 1.0, |steering_angle|=20 to 25\n  - OVERSTEER WARNING: When |delta| < 10 deg and you are between the track edges, use the smallest valid steering_angle. Oversteering on a near-straight causes oscillation and wastes speed.\n\nKNOWLEDGE CARRY-FORWARD: Your previous response is re-injected each turn. Read your previous \"knowledge\" field and update it based on what just happened. Keep it to at most 10 concise bullet points. Drop outdated or redundant points. This is your running memory of what works on this track.\n\nOUTPUT FORMAT: Respond ONLY with a JSON object containing exactly these fields:\n  \"reasoning\": one sentence describing track state and why you chose this action\n  \"knowledge\": array of up to 10 short strings, updated from previous knowledge\n  \"movement_analysis\": store previous values of x, y and yaw in a concise format to track your position and heading over time, e.g. as an array of the last 5 values for each\n  \"waypoint_analysis\": computed bearing delta to waypoint at nearest_waypoints[1]+5, in degrees, positive=left, negative=right\n  \"speed\": float matching a value in the action space\n  \"steering_angle\": float matching a value in the action space, no + prefix on positive values",
+    "messages": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"action_space_type\": \"discrete\", \"action_space\": {\"actions\": [{\"steering_angle\": -25.0, \"speed\": 0.75, \"index\": 0}, {\"steering_angle\": -20.0, \"speed\": 1.0, \"index\": 1}, {\"steering_angle\": -15.0, \"speed\": 1.5, \"index\": 2}, {\"steering_angle\": -10.0, \"speed\": 1.5, \"index\": 3}, {\"steering_angle\": -5.0, \"speed\": 1.5, \"index\": 4}, {\"steering_angle\": -2.5, \"speed\": 1.5, \"index\": 5}, {\"steering_angle\": 0.0, \"speed\": 1.5, \"index\": 6}, {\"steering_angle\": 2.5, \"speed\": 1.5, \"index\": 7}, {\"steering_angle\": 5.0, \"speed\": 1.5, \"index\": 8}, {\"steering_angle\": 10.0, \"speed\": 1.5, \"index\": 9}, {\"steering_angle\": 15.0, \"speed\": 1.5, \"index\": 10}, {\"steering_angle\": 20.0, \"speed\": 1.0, \"index\": 11}, {\"steering_angle\": 25.0, \"speed\": 0.75, \"index\": 12}]}}"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Image #1. Review your previous knowledge field. Now look at the new image and state JSON. Describe in one sentence what the track looks like ahead and whether the car is on course, then output your driving command as JSON."
+          },
+          {
+            "type": "text",
+            "text": "Current state information:"
+          },
+          {
+            "type": "text",
+            "text": "{\"all_wheels_on_track\": true, \"x\": 0.0, \"y\": 0.0, \"heading\": 0.0, \"distance_from_center\": 0.0, \"projection_distance\": 0.0, \"progress\": 0.0, \"steps\": 0, \"speed\": 0.0, \"steering_angle\": 0.0, \"track_width\": 0.0, \"track_length\": 0.0, \"waypoints\": 0, \"closest_waypoints\": [0, 0], \"is_left_of_center\": false, \"is_reversed\": false, \"closest_objects\": [0, 0], \"objects_location\": [], \"objects_left_of_center\": [], \"object_in_camera\": false, \"objects_speed\": [], \"objects_heading\": [], \"objects_distance_from_center\": [], \"objects_distance\": [], \"is_crashed\": false, \"is_offtrack\": false, \"sim_time\": 0.0}"
+          },
+          {
+            "type": "image",
+            "source": {
+              "type": "base64",
+              "media_type": "image/jpeg",
+              "data": "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"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "prompt": "Image #1. Review your previous knowledge field. Now look at the new image and state JSON. Describe in one sentence what the track looks like ahead and whether the car is on course, then output your driving command as JSON.",
+  "image_present": true,
+  "image_size_bytes": 3336,
+  "timestamp": "20260326-172636",
+  "episode": 0,
+  "step": 1,
+  "off_track": false,
+  "crashed": false
+}

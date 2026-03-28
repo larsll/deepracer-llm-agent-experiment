@@ -1,0 +1,45 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Car is near the left edge on a long straight with delta of -32.92\u00b0 requiring a right correction to steer back toward the track center line.",
+    "knowledge": [
+      "Track is a long straight running east at y\u22480.68 for most of the lap",
+      "Car consistently drifts left of center \u2014 needs right corrections on the straight",
+      "Positive delta = steer left (positive steering_angle), negative = steer right",
+      "At delta < 5\u00b0, use steering_angle=0 at speed 1.5 to avoid oscillation",
+      "Car is 0.19m left of center \u2014 approaching left edge, needs correction",
+      "Oversteer warning: once delta drops below 5\u00b0, use steering_angle=0 immediately",
+      "Track curves right (south) around waypoints 24-30",
+      "Delta of -32\u00b0 requires -15\u00b0 steering at speed 1.5",
+      "Previous -15\u00b0 steering did not fully correct leftward drift \u2014 may need sustained correction",
+      "White line visible on left in image confirms car is near left boundary"
+    ],
+    "movement_analysis": {
+      "x": [
+        2.329,
+        2.425,
+        2.523,
+        2.613
+      ],
+      "y": [
+        0.764,
+        0.797,
+        0.839,
+        0.876
+      ],
+      "yaw": [
+        -1.6,
+        5.6,
+        12.0,
+        15.0
+      ]
+    },
+    "waypoint_analysis": -32.92,
+    "speed": 1.5,
+    "steering_angle": -15.0
+  },
+  "normalized_action": 2,
+  "steering_angle": -15.0,
+  "speed": 1.5,
+  "inference_time": 13.807940483093262,
+  "timestamp": "20260326-172636"
+}

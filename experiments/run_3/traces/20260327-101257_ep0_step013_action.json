@@ -1,0 +1,48 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Long straight ahead with car essentially centered and heading perfectly aligned with waypoints; delta is near zero so maintain full speed with no steering correction.",
+    "knowledge": [
+      "Track starts with a long straight along y\u22480.683 before curving right around x=6.3.",
+      "Big right curve begins around waypoint index 22-30 (x~6.3-7.2).",
+      "After the right curve, track goes left and loops back.",
+      "Track total length ~17.7m, 121 waypoints.",
+      "Use steering_angle=0 on straights to avoid oscillation.",
+      "Prefer speed 1.5 on straights and gentle curves.",
+      "Car is nearly perfectly centered on the straight, heading ~0\u00b0 (due east).",
+      "Car making steady forward progress at 1.5 m/s on the straight.",
+      "Waypoints 22-30 show significant right curve; prepare to steer right when approaching x~6.2.",
+      "No objects on track detected."
+    ],
+    "movement_analysis": {
+      "x": [
+        3.7655,
+        3.8736,
+        3.9756,
+        4.0583,
+        4.073
+      ],
+      "y": [
+        0.688,
+        0.6885,
+        0.6886,
+        0.6887,
+        0.6887
+      ],
+      "heading": [
+        0.142,
+        0.121,
+        0.042,
+        -0.008,
+        -0.012
+      ]
+    },
+    "waypoint_analysis": "Target WP12 at (4.857, 0.684): bearing=-0.35\u00b0, delta=-0.34\u00b0 \u2192 essentially straight, no correction needed.",
+    "speed": 1.5,
+    "steering_angle": 0.0
+  },
+  "normalized_action": 6,
+  "steering_angle": 0.0,
+  "speed": 1.5,
+  "inference_time": 15.52941608428955,
+  "timestamp": "20260327-101257"
+}

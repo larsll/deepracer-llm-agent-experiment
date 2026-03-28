@@ -1,0 +1,48 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Track goes straight ahead but car heading is ~-99\u00b0 (nearly south) while waypoints are eastward; delta=+89.6\u00b0 requires hard left steering to realign heading toward the track direction.",
+    "knowledge": [
+      "Positive steering = left turn, negative = right turn",
+      "Car has been stuck near x=0.53, y=3.69-3.77 heading~-100\u00b0 for many steps \u2014 very slow progress",
+      "Target WP93 gives delta ~+90\u00b0 \u2014 hard left needed to realign heading toward eastward track",
+      "Track curves east ahead \u2014 waypoints go from x=0.5 to x=6+ eastward",
+      "Speed 0.75 for |delta|>50\u00b0; 1.0 for 30-50\u00b0; 1.5 for <30\u00b0",
+      "After heading swings past -50\u00b0, reduce steering to avoid overshoot",
+      "Progress at 74% \u2014 car barely advancing despite max left steering",
+      "Continue max left steering until heading aligns with eastward track direction (~-10\u00b0)",
+      "Car is right of center (is_left_of_center=false), distance_from_center=0.183m",
+      "Once heading aligns eastward, increase speed and reduce steering"
+    ],
+    "movement_analysis": {
+      "x": [
+        0.531,
+        0.531,
+        0.531,
+        0.525,
+        0.529
+      ],
+      "y": [
+        3.772,
+        3.772,
+        3.772,
+        3.738,
+        3.688
+      ],
+      "yaw": [
+        -102.25,
+        -102.25,
+        -102.25,
+        -101.22,
+        -98.75
+      ]
+    },
+    "waypoint_analysis": "Target WP93 at (6.230, 2.770): dy=-0.918, dx=5.701, bearing=-9.14\u00b0, delta=+89.61\u00b0 \u2192 steer hard LEFT",
+    "speed": 0.75,
+    "steering_angle": 25.0
+  },
+  "normalized_action": 12,
+  "steering_angle": 25.0,
+  "speed": 0.75,
+  "inference_time": 16.284737586975098,
+  "timestamp": "20260327-025518"
+}

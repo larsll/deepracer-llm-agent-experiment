@@ -1,0 +1,45 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Track continues curving sharply right; car is on course near right edge at WP85-86 heading southwest at -158\u00b0, sustained right steering needed to follow the bend.",
+    "knowledge": [
+      "Positive steering = left turn, negative = right turn",
+      "Delta under 5\u00b0 means steer 0 to avoid oscillation",
+      "Near WP84-91, track curves sharply right \u2014 heading transitions from ~-149\u00b0 toward ~-176\u00b0",
+      "Speed 0.75 for |delta|>50\u00b0; 1.0 for 30-50\u00b0; 1.5 for <30\u00b0",
+      "WP+5 target gives large delta on tight curves \u2014 visual confirms steering direction",
+      "Track curves sharply right after WP84 toward WP89-91 \u2014 maintain negative steering",
+      "Track width ~0.76m \u2014 small corrections sufficient, avoid overcorrecting",
+      "Car is right of center (0.14m) \u2014 consistent with right curve approach, acceptable",
+      "Heading near -158\u00b0 corresponds to southwest travel on this section of track",
+      "Sustained -20\u00b0 steering at 1.0 speed is working well through this right-hand curve"
+    ],
+    "movement_analysis": {
+      "x": [
+        0.896,
+        0.803,
+        0.723,
+        0.654
+      ],
+      "y": [
+        4.099,
+        4.058,
+        4.035,
+        4.021
+      ],
+      "yaw": [
+        -152.64,
+        -153.65,
+        -156.26,
+        -158.27
+      ]
+    },
+    "waypoint_analysis": "Target WP91 at (6.527, 2.730): dy=-1.291, dx=5.873, bearing=-12.39\u00b0, delta=+145.88\u00b0 (large due to far waypoint across track curve) \u2192 continue right turn",
+    "speed": 1.0,
+    "steering_angle": -20.0
+  },
+  "normalized_action": 1,
+  "steering_angle": -20.0,
+  "speed": 1.0,
+  "inference_time": 17.5928692817688,
+  "timestamp": "20260327-025518"
+}

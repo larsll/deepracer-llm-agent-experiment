@@ -1,0 +1,45 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Track curves sharply right ahead as confirmed by image, car heading ~164\u00b0 needs sustained right steering through this bend to follow the curve south then southeast.",
+    "knowledge": [
+      "Track has a long westward straight around waypoints 70-76, heading ~160-170\u00b0",
+      "After waypoint ~76, track curves sharply south then southeast \u2014 sustained right steering needed",
+      "Lookahead waypoints beyond the curve give misleading large positive deltas due to heading wrap-around at ~180\u00b0",
+      "When navigating the right-hand curve after waypoint 76, use -20 steering at speed 1.0",
+      "Car is slightly right of center (is_left_of_center=false) on this section \u2014 acceptable",
+      "Image confirms sharp right curve continues \u2014 trust visual over waypoint wrap-around artifacts",
+      "Sustained -20 steering needed through this curve section until heading reaches ~0\u00b0 (east)",
+      "Speed 1.0 appropriate for this sharp curve section",
+      "Progress at 64.9% with all wheels on track \u2014 curve navigation working correctly",
+      "Car moving slowly westward (x decreasing) while curving \u2014 curve is tightening"
+    ],
+    "movement_analysis": {
+      "x": [
+        2.145,
+        2.041,
+        1.955,
+        1.888
+      ],
+      "y": [
+        4.603,
+        4.624,
+        4.651,
+        4.682
+      ],
+      "yaw": [
+        169.658,
+        169.311,
+        167.039,
+        164.196
+      ]
+    },
+    "waypoint_analysis": 167.0,
+    "speed": 1.0,
+    "steering_angle": -20.0
+  },
+  "normalized_action": 1,
+  "steering_angle": -20.0,
+  "speed": 1.0,
+  "inference_time": 17.876855850219727,
+  "timestamp": "20260326-172636"
+}

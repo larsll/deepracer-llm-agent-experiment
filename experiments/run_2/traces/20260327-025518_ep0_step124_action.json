@@ -1,0 +1,45 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Delta of -0.69\u00b0 to WP88 means the car is nearly perfectly aligned with the upcoming waypoint on this rightward curve, so I maintain speed with zero steering to avoid oscillation.",
+    "knowledge": [
+      "Positive steering = left turn, negative = right turn",
+      "Delta under 5\u00b0 means steer 0 to avoid oscillation",
+      "Delta 5-15\u00b0 use \u00b15\u00b0; 15-30\u00b0 use \u00b110 to \u00b115\u00b0; 30-50\u00b0 use \u00b115 to \u00b120\u00b0; >50\u00b0 use \u00b125\u00b0",
+      "Near WP80-90, track curves right \u2014 expect small negative delta values requiring minimal steering",
+      "Speed 0.75 for |delta|>50\u00b0; 1.0 for 30-50\u00b0; 1.5 for <30\u00b0",
+      "Car is slightly left of center (~0.127m) \u2014 consistent with right curve approach",
+      "Heading near -148\u00b0 corresponds to southwest travel on this section of track",
+      "Track curves sharply right after WP83 toward WP88-90 \u2014 watch for increasing delta",
+      "Zero steering when delta < 5\u00b0 prevents oscillation and maintains max speed",
+      "Track width ~0.76m \u2014 small corrections are sufficient, avoid overcorrecting"
+    ],
+    "movement_analysis": {
+      "x": [
+        1.423,
+        1.335,
+        1.263,
+        1.169
+      ],
+      "y": [
+        4.407,
+        4.337,
+        4.283,
+        4.227
+      ],
+      "yaw": [
+        -153.48,
+        -148.95,
+        -147.58,
+        -148.14
+      ]
+    },
+    "waypoint_analysis": "Target WP88 at (0.805, 4.007): dy=-0.220, dx=-0.364, bearing=-148.83\u00b0, delta=-0.69\u00b0 \u2192 nearly aligned, steer 0\u00b0",
+    "speed": 1.5,
+    "steering_angle": 0.0
+  },
+  "normalized_action": 6,
+  "steering_angle": 0.0,
+  "speed": 1.5,
+  "inference_time": 16.339585542678833,
+  "timestamp": "20260327-025518"
+}

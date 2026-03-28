@@ -1,0 +1,42 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Track curves sharply right ahead (waypoint 108 delta \u2248 -40\u00b0), car is left of center heading south-southeast, need significant right steering to follow the track line downward.",
+    "knowledge": [
+      "Track loops sharply south around waypoints 103-112 then curves back northeast",
+      "At progress ~87%, car is in the bottom-right section curving south then east",
+      "Waypoints 108-112 trend south/southeast \u2014 car must steer right significantly here",
+      "Car heading -47\u00b0 needs to decrease further (more negative) to follow track south",
+      "Positive delta = steer left, negative delta = steer right",
+      "At delta -40\u00b0, use steering_angle=-20 at speed 1.0",
+      "Car is left of center \u2014 track curving right confirms right steering needed",
+      "Previous -15\u00b0 steering at delta -28\u00b0 was correct but track is curving more now",
+      "After waypoint 112, track begins heading northeast \u2014 watch for left turn",
+      "Avoid oversteer oscillation on straights; use smallest valid angle when delta < 10\u00b0"
+    ],
+    "movement_analysis": {
+      "x": [
+        1.115,
+        1.16,
+        1.206
+      ],
+      "y": [
+        1.446,
+        1.42,
+        1.394
+      ],
+      "yaw": [
+        -54.3,
+        -50.5,
+        -47.2
+      ]
+    },
+    "waypoint_analysis": -40.2,
+    "speed": 1.0,
+    "steering_angle": -20.0
+  },
+  "normalized_action": 1,
+  "steering_angle": -20.0,
+  "speed": 1.0,
+  "inference_time": 14.559803009033203,
+  "timestamp": "20260326-172636"
+}

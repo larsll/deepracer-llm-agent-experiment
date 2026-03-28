@@ -1,0 +1,45 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Car is off-track on the left grass with heading -30.7\u00b0; target WP114 bearing is -10.25\u00b0, delta=+20.49\u00b0 requiring left (CCW) steering to align heading eastward toward the track.",
+    "knowledge": [
+      "Positive steering = left turn (CCW heading increase), negative = right turn (CW)",
+      "Car has been off-track left (is_offtrack=true) for multiple steps \u2014 priority is recovery",
+      "Heading correction: need to rotate from ~-31\u00b0 toward ~-10\u00b0 (eastward) = positive delta = left steer",
+      "Track at this section runs nearly due east (waypoints y~0.68, increasing x)",
+      "Once back on track, reduce steering aggressively to avoid oscillation",
+      "Track width 0.76m \u2014 very narrow, precision required once on track",
+      "Car x~1.85, y~1.28 but track centerline y~0.68 \u2014 car is ~0.6m above (north of) track center",
+      "Lap nearly complete (92% progress) \u2014 must recover without crashing",
+      "Speed 1.0 appropriate during recovery phase",
+      "After recovery, use small steering corrections (\u00b15\u00b0) to stay on narrow track"
+    ],
+    "movement_analysis": {
+      "x": [
+        1.657,
+        1.722,
+        1.778,
+        1.85
+      ],
+      "y": [
+        1.344,
+        1.317,
+        1.298,
+        1.282
+      ],
+      "yaw": [
+        -44.52,
+        -40.15,
+        -36.5,
+        -30.74
+      ]
+    },
+    "waypoint_analysis": "Target WP114 at (5.156, 0.684): dy=-0.598, dx=3.306, bearing=-10.25\u00b0, delta=+20.49\u00b0 \u2192 LEFT steer needed",
+    "speed": 1.0,
+    "steering_angle": 20.0
+  },
+  "normalized_action": 11,
+  "steering_angle": 20.0,
+  "speed": 1.0,
+  "inference_time": 19.4207763671875,
+  "timestamp": "20260327-025518"
+}

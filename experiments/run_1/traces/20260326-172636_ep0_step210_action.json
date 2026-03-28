@@ -1,0 +1,42 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Long eastward straight ahead, car heading is -8.8\u00b0 but track direction is ~-1\u00b0, delta is +7.8\u00b0 so small left steering at speed 1.5 to continue aligning with the straight without oversteering.",
+    "knowledge": [
+      "After waypoint 108, track runs nearly due east at y\u22480.68 \u2014 long straight ahead",
+      "Car heading recovering from -38\u00b0 toward 0\u00b0 \u2014 left steering is working gradually",
+      "Positive delta = steer left (positive steering_angle), negative = steer right",
+      "At delta 5-15\u00b0, use steering_angle=+5 at speed 1.5 to avoid overshoot",
+      "Car is slightly left of center (~0.07m) \u2014 within safe bounds at track width 0.76m",
+      "Waypoints 113-119 all at y\u22480.68, x increasing \u2014 long eastward straight",
+      "Oversteer warning: once delta drops below 5\u00b0, use steering_angle=0 immediately",
+      "Car heading slowly recovering toward 0\u00b0 \u2014 left steering is working but slowly",
+      "Watch for transition: once heading reaches ~0\u00b0, reduce steering to avoid oscillation",
+      "Progress at 95.4% \u2014 approaching end of lap, maintain alignment for clean finish"
+    ],
+    "movement_analysis": {
+      "x": [
+        2.057,
+        2.135,
+        2.238
+      ],
+      "y": [
+        0.735,
+        0.734,
+        0.743
+      ],
+      "yaw": [
+        -24.3,
+        -17.3,
+        -8.8
+      ]
+    },
+    "waypoint_analysis": 7.83,
+    "speed": 1.5,
+    "steering_angle": 5.0
+  },
+  "normalized_action": 8,
+  "steering_angle": 5.0,
+  "speed": 1.5,
+  "inference_time": 15.336000680923462,
+  "timestamp": "20260326-172636"
+}

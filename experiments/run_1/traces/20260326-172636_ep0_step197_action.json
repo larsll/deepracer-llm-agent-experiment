@@ -1,0 +1,42 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Track curves right in image but waypoint analysis shows delta +36.3\u00b0 meaning the target waypoint is to the LEFT \u2014 car heading is too far south and needs to turn left/northeast to follow the track centerline.",
+    "knowledge": [
+      "Track loops sharply south around waypoints 103-115 then curves back northeast",
+      "After waypoint 106, track runs nearly due east at y\u22480.68 \u2014 car must steer left strongly",
+      "Positive delta = steer left, negative delta = steer right",
+      "At delta +30-50\u00b0, use steering_angle=+15 to +20 at speed 1.0-1.5",
+      "Car is left of center (0.21m) \u2014 within safe bounds at track width 0.75m",
+      "Waypoints 106-120 run east along y\u22480.68-0.69 \u2014 long straight ahead",
+      "After sharp south loop, car must aggressively turn left to follow eastward track",
+      "Avoid oversteer oscillation on straights; use smallest valid angle when delta < 10\u00b0",
+      "Previous -15 steering was wrong direction for this segment \u2014 delta was actually positive",
+      "Watch for transition from southward heading to eastward heading around waypoint 106"
+    ],
+    "movement_analysis": {
+      "x": [
+        1.369,
+        1.41,
+        1.458
+      ],
+      "y": [
+        1.273,
+        1.231,
+        1.168
+      ],
+      "yaw": [
+        -41.7,
+        -42.4,
+        -44.8
+      ]
+    },
+    "waypoint_analysis": 36.3,
+    "speed": 1.5,
+    "steering_angle": 20.0
+  },
+  "normalized_action": 11,
+  "steering_angle": 20.0,
+  "speed": 1.5,
+  "inference_time": 16.072364568710327,
+  "timestamp": "20260326-172636"
+}

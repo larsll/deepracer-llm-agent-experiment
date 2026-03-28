@@ -1,0 +1,45 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Track continues curving left ahead, WP46 bearing gives delta ~+28\u00b0 (left), car is slightly left of center but well within boundaries, maintaining steering_angle=15 at speed=1.5 to follow the sustained left curve.",
+    "knowledge": [
+      "Track starts with a long straight along y\u22480.683 before curving left around x=6.3-7.3.",
+      "Left curve spans WP27-44 requiring sustained positive steering ~15\u00b0.",
+      "After the left curve, track continues west along y\u22482.77 (WP44-50).",
+      "Track total length ~17.7m, 121 waypoints.",
+      "Use steering_angle=0 on straights to avoid oscillation.",
+      "Prefer speed 1.5 on straights and gentle curves.",
+      "Delta has been consistently +28\u00b0 to +32\u00b0 across multiple steps \u2014 sustained left curve still active.",
+      "Consistent steering_angle=15 at speed=1.5 working well through this left curve.",
+      "Car is slightly left of center (~0.058m) but well within track width \u2014 no boundary concern.",
+      "WP46-50 region: track straightens westward along y\u22482.77, expect delta to decrease soon."
+    ],
+    "movement_analysis": {
+      "x": [
+        6.8272,
+        6.7502,
+        6.6582,
+        6.5647
+      ],
+      "y": [
+        2.4994,
+        2.5548,
+        2.6091,
+        2.654
+      ],
+      "heading": [
+        128.014,
+        132.895,
+        138.128,
+        143.364
+      ]
+    },
+    "waypoint_analysis": "Target WP46 at (5.780, 2.771): bearing=171.53\u00b0, delta=+28.17\u00b0 \u2192 moderate-left steer.",
+    "speed": 1.5,
+    "steering_angle": 15.0
+  },
+  "normalized_action": 10,
+  "steering_angle": 15.0,
+  "speed": 1.5,
+  "inference_time": 20.181153059005737,
+  "timestamp": "20260327-101257"
+}

@@ -1,0 +1,45 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Track is nearly straight ahead with delta only +1.84\u00b0 to waypoint 51, car is slightly left of center but all wheels on track \u2014 use zero steering at full speed to avoid oscillation.",
+    "knowledge": [
+      "Track starts with a long straight section heading in +X direction along y\u22480.683",
+      "Large left-curving loop begins around waypoint 24-30 (y increases rapidly)",
+      "Car is consistently ~0.11m left of center through this curve \u2014 avoid over-steering further left",
+      "After the left curve, track straightens heading ~170\u00b0 before looping back",
+      "Full circuit ~17.7m, speed 1.5 is max and appropriate for moderate curves",
+      "Car heading now ~171\u00b0 confirming near-straight section after the left curve",
+      "Use steering_angle=0 for delta <5\u00b0 to avoid oscillation on near-straight sections",
+      "Track width ~0.76m, car is 0.11m left of center \u2014 still safe",
+      "Heading has been increasing steadily: 147\u2192153\u2192159\u2192164\u2192171 \u2014 curve is flattening",
+      "Next section appears to continue slightly left then straighten \u2014 monitor delta carefully"
+    ],
+    "movement_analysis": {
+      "x": [
+        6.1699,
+        6.0684,
+        5.9722,
+        5.87
+      ],
+      "y": [
+        2.6375,
+        2.6555,
+        2.6636,
+        2.6587
+      ],
+      "yaw": [
+        152.955,
+        158.936,
+        164.024,
+        170.865
+      ]
+    },
+    "waypoint_analysis": 1.84,
+    "speed": 1.5,
+    "steering_angle": 0.0
+  },
+  "normalized_action": 6,
+  "steering_angle": 0.0,
+  "speed": 1.5,
+  "inference_time": 15.645395040512085,
+  "timestamp": "20260326-172636"
+}

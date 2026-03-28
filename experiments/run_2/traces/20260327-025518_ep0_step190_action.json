@@ -1,0 +1,48 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Car remains stuck at x=1.168, y=2.250, heading=-78.3\u00b0 for many steps; WP103 gives delta +87.4\u00b0 requiring hard left turn to rotate heading toward east; persisting with max left steering at minimum speed.",
+    "knowledge": [
+      "Positive steering = left turn (CCW), negative = right turn (CW)",
+      "Car heading ~-78\u00b0 (nearly south) needs strong left correction to face east (~0\u00b0)",
+      "Delta >50\u00b0 requires speed 0.75 and steering 25\u00b0 (sharp turn)",
+      "Car position STUCK at x=1.168, y=2.250 for many consecutive steps \u2014 simulation may be paused or car is spinning",
+      "WP103 at (4.74, 2.82) is far east \u2014 need to rotate heading from -78\u00b0 toward 0\u00b0",
+      "Once heading reaches ~0-10\u00b0, reduce steering to avoid overshoot",
+      "Track curves right further ahead \u2014 after realigning, will need right steering",
+      "Progress stuck at 82.46% \u2014 car not advancing along track",
+      "Car is left of center \u2014 acceptable while turning to realign",
+      "Must persist with max left steering until heading rotates significantly toward east"
+    ],
+    "movement_analysis": {
+      "x": [
+        1.567,
+        1.181,
+        1.168,
+        1.168,
+        1.168
+      ],
+      "y": [
+        2.461,
+        2.232,
+        2.25,
+        2.25,
+        2.25
+      ],
+      "yaw": [
+        -31.92,
+        -77.94,
+        -78.3,
+        -78.3,
+        -78.3
+      ]
+    },
+    "waypoint_analysis": "Target WP103 at (4.735, 2.821): dy=+0.572, dx=3.567, bearing=+9.10\u00b0, delta=+87.40\u00b0 \u2192 hard LEFT turn needed",
+    "speed": 0.75,
+    "steering_angle": 25.0
+  },
+  "normalized_action": 12,
+  "steering_angle": 25.0,
+  "speed": 0.75,
+  "inference_time": 16.231854677200317,
+  "timestamp": "20260327-025518"
+}

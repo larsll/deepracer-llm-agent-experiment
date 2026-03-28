@@ -1,0 +1,45 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Track curves sharply left ahead as car continues through the bottom of the loop; delta of ~87\u00b0 means continue strong left steering at low speed to swing heading northward toward waypoint 108.",
+    "knowledge": [
+      "Track loops sharply south then back northeast around waypoints 95-110",
+      "Positive delta means steer left (positive steering_angle)",
+      "At delta >50\u00b0, use speed=0.75 and steering=+25\u00b0",
+      "Car heading improving steadily: -79.1 \u2192 -74.4 \u2192 -70.5 \u2192 -65.2 \u2192 -61.0 \u2192 -58.8",
+      "After southward section, waypoints loop back east then north",
+      "Avoid overcorrecting \u2014 once delta < 5\u00b0, reduce steering to 0\u00b0",
+      "Delta still large (~87\u00b0) \u2014 maintain max left steer at 0.75 speed",
+      "Car is right of center (is_left_of_center=false) \u2014 track curves left ahead",
+      "Once heading swings past 0\u00b0 (east), reduce steering to avoid overshoot",
+      "Progress at 86.6% \u2014 still in tight bottom turn, stay slow and controlled"
+    ],
+    "movement_analysis": {
+      "x": [
+        0.941,
+        0.988,
+        1.034,
+        1.062
+      ],
+      "y": [
+        1.602,
+        1.551,
+        1.509,
+        1.484
+      ],
+      "yaw": [
+        -70.5,
+        -65.2,
+        -61.0,
+        -58.8
+      ]
+    },
+    "waypoint_analysis": 87.1,
+    "speed": 0.75,
+    "steering_angle": 25.0
+  },
+  "normalized_action": 12,
+  "steering_angle": 25.0,
+  "speed": 0.75,
+  "inference_time": 14.774658918380737,
+  "timestamp": "20260326-172636"
+}

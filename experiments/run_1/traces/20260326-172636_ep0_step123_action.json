@@ -1,0 +1,45 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Car is back on track (all_wheels_on_track=true) with heading -178\u00b0 facing west, target waypoint bearing is -22.7\u00b0 giving delta +155.87\u00b0, so I need a large left turn to realign with the track direction.",
+    "knowledge": [
+      "Car recovered to on-track at step 122 after extended off-track period",
+      "Heading -178\u00b0 (facing west) needs to reach ~-22\u00b0 to follow track \u2014 large left correction needed",
+      "Track curves left ahead based on visual \u2014 asphalt visible with left bend",
+      "Waypoints 80-85 run roughly east (x increasing, y ~2.77) from car's current position",
+      "Car is right of center (is_left_of_center=false) with distance 0.204 on 0.76 wide track",
+      "Progress at 67.55% \u2014 car is near waypoints 79-80 area",
+      "Maximum left steering needed to realign heading from -178\u00b0 toward target bearing",
+      "Speed should stay low (0.75) during sharp realignment turns",
+      "Track width is 0.76m \u2014 limited margin for error during recovery",
+      "Visual confirms track curves left \u2014 consistent with positive delta calculation"
+    ],
+    "movement_analysis": {
+      "x": [
+        1.578,
+        1.558,
+        1.539,
+        1.412
+      ],
+      "y": [
+        5.001,
+        5.045,
+        5.098,
+        4.664
+      ],
+      "yaw": [
+        136.553,
+        133.138,
+        129.4,
+        -178.573
+      ]
+    },
+    "waypoint_analysis": 155.87,
+    "speed": 0.75,
+    "steering_angle": 25.0
+  },
+  "normalized_action": 12,
+  "steering_angle": 25.0,
+  "speed": 0.75,
+  "inference_time": 21.807502031326294,
+  "timestamp": "20260326-172636"
+}

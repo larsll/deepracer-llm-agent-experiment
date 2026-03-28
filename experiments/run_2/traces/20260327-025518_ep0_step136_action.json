@@ -1,0 +1,48 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Car is 0.506m right of center with heading -179.7\u00b0, off-track, and delta of +167.7\u00b0 confirms hard left steering needed to recover toward the track center.",
+    "knowledge": [
+      "Positive steering = left turn, negative = right turn",
+      "Near WP86-92, heading near -180\u00b0 means car faces nearly due-west",
+      "Speed 0.75 for |delta|>50\u00b0; 1.0 for 30-50\u00b0; 1.5 for <30\u00b0",
+      "Track width ~0.76m \u2014 car is 0.506m right of center, off-track",
+      "Car has been drifting right repeatedly \u2014 sustained hard left needed to recover",
+      "WP+5 target gives large positive delta on this section \u2014 confirms left steer needed",
+      "Recovery from right edge: maintain +25\u00b0 steering at 0.75 speed",
+      "After recovery to center, reduce steering to avoid oscillation",
+      "Car position barely changing despite +25\u00b0 steering \u2014 may be stuck or spinning",
+      "Track appears as flat green with no visible boundaries when off-track"
+    ],
+    "movement_analysis": {
+      "x": [
+        0.53,
+        0.453,
+        0.382,
+        0.336,
+        0.275
+      ],
+      "y": [
+        4.011,
+        4.015,
+        4.027,
+        4.039,
+        4.053
+      ],
+      "yaw": [
+        -164.01,
+        -168.13,
+        -172.79,
+        -176.32,
+        -179.7
+      ]
+    },
+    "waypoint_analysis": "Target WP92 at (6.381, 2.760): dy=-1.293, dx=6.106, bearing=-11.97\u00b0, delta=+167.73\u00b0 \u2192 steer hard LEFT to recover from right edge",
+    "speed": 0.75,
+    "steering_angle": 25.0
+  },
+  "normalized_action": 12,
+  "steering_angle": 25.0,
+  "speed": 0.75,
+  "inference_time": 16.28341841697693,
+  "timestamp": "20260327-025518"
+}

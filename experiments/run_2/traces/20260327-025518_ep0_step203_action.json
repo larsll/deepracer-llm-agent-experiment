@@ -1,0 +1,48 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Car is fully off-track on left grass with is_offtrack=true, heading -36\u00b0 needs to rotate to ~+24\u00b0 bearing toward WP106, delta=+60\u00b0 confirms hard left steering required to swing heading northeast toward the track.",
+    "knowledge": [
+      "Positive steering = left turn (CCW), negative = right turn (CW)",
+      "Car has been off-track left for many steps, is_offtrack=true confirmed",
+      "Delta >50\u00b0 requires speed 0.75 and steering 25\u00b0 (sharp turn)",
+      "Car position barely advancing: x~1.56-1.66, y~1.87-1.97 \u2014 very slow progress",
+      "WP106 at (4.36, 3.06) is far northeast \u2014 need to rotate heading from -36\u00b0 toward +24\u00b0",
+      "Once heading reaches ~0-10\u00b0, reduce steering to avoid overshoot",
+      "Car is left of center (0.59m from center, track width 0.76m) \u2014 well past left edge",
+      "Progress at ~85% \u2014 car IS moving forward but very slowly",
+      "Must persist with max left steering until heading rotates significantly toward east/northeast",
+      "Track visible as dark strip to upper-right in image \u2014 car on green grass off-track"
+    ],
+    "movement_analysis": {
+      "x": [
+        1.514,
+        1.563,
+        1.61,
+        1.656,
+        1.656
+      ],
+      "y": [
+        1.917,
+        1.898,
+        1.884,
+        1.874,
+        1.874
+      ],
+      "yaw": [
+        -46.19,
+        -41.66,
+        -38.75,
+        -36.32,
+        -36.32
+      ]
+    },
+    "waypoint_analysis": "Target WP106 at (4.359, 3.060): dy=+1.186, dx=2.703, bearing=+23.74\u00b0, delta=+60.06\u00b0 \u2192 hard LEFT turn needed",
+    "speed": 0.75,
+    "steering_angle": 25.0
+  },
+  "normalized_action": 12,
+  "steering_angle": 25.0,
+  "speed": 0.75,
+  "inference_time": 20.110316276550293,
+  "timestamp": "20260327-025518"
+}

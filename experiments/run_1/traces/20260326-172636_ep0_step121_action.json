@@ -1,0 +1,48 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Car is off-track with heading 133\u00b0 while target waypoint is at bearing -27\u00b0, requiring continued maximum right steering to realign with the eastward track direction.",
+    "knowledge": [
+      "Track curves sharply after waypoint ~76 \u2014 sustained right steering needed to recover",
+      "Car has been off-track for many steps, drifting to outer edge of right curve",
+      "Car heading decreasing slowly: 169\u2192152\u2192144\u2192137\u2192133 \u2014 right turn is working but slow",
+      "Must maintain maximum right steering (-25) at low speed (0.75) until heading drops below ~0\u00b0",
+      "Car is right of center (is_left_of_center=false) \u2014 on outside of right-hand curve",
+      "distance_from_center=0.576 with track_width=0.762 \u2014 very close to edge, recovery critical",
+      "Visual shows dark wall on left \u2014 car near outer boundary, need to steer hard right",
+      "Heading needs to drop to ~-27\u00b0 (east-southeast) to realign with track direction",
+      "Progress at 66.67% \u2014 car making forward progress despite being off-line",
+      "all_wheels_on_track=false but is_offtrack=false \u2014 car is partially off but not reset"
+    ],
+    "movement_analysis": {
+      "x": [
+        1.636,
+        1.602,
+        1.578,
+        1.578,
+        1.558
+      ],
+      "y": [
+        4.906,
+        4.957,
+        5.001,
+        5.001,
+        5.045
+      ],
+      "yaw": [
+        144.399,
+        139.971,
+        136.553,
+        136.553,
+        133.138
+      ]
+    },
+    "waypoint_analysis": -159.84,
+    "speed": 0.75,
+    "steering_angle": -25.0
+  },
+  "normalized_action": 0,
+  "steering_angle": -25.0,
+  "speed": 0.75,
+  "inference_time": 17.610807180404663,
+  "timestamp": "20260326-172636"
+}

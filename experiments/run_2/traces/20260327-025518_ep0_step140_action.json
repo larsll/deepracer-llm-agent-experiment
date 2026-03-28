@@ -1,0 +1,42 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Car is back on track (all_wheels_on_track=true) at heading -100\u00b0 facing mostly south, but target waypoint is far to the east-southeast giving delta +90.75\u00b0, requiring hard left steering to turn toward the track direction.",
+    "knowledge": [
+      "Positive steering = left turn, negative = right turn",
+      "Car recovered to on-track status after sustained hard left steering",
+      "Near WP87-93, car needs to turn from southward heading toward east",
+      "Speed 0.75 for |delta|>50\u00b0; 1.0 for 30-50\u00b0; 1.5 for <30\u00b0",
+      "Track width ~0.76m \u2014 car is 0.18m right of center, manageable",
+      "WP+5 target gives large positive delta on this section \u2014 confirms left steer",
+      "After recovery, heading will need to swing from -100\u00b0 toward ~-10\u00b0 (east)",
+      "Maintain max left steering until delta drops below 30\u00b0",
+      "Car x=0.535, y=3.746 \u2014 on the left/inner part of the track curve",
+      "Track curves right ahead \u2014 need to follow waypoints east then southeast"
+    ],
+    "movement_analysis": {
+      "x": [
+        0.18,
+        0.123,
+        0.535
+      ],
+      "y": [
+        4.048,
+        4.03,
+        3.746
+      ],
+      "yaw": [
+        -179.42,
+        -176.62,
+        -100.48
+      ]
+    },
+    "waypoint_analysis": "Target WP93 at (6.230, 2.770): dy=-0.976, dx=5.694, bearing=-9.73\u00b0, delta=+90.75\u00b0 \u2192 steer hard LEFT",
+    "speed": 0.75,
+    "steering_angle": 25.0
+  },
+  "normalized_action": 12,
+  "steering_angle": 25.0,
+  "speed": 0.75,
+  "inference_time": 15.204145431518555,
+  "timestamp": "20260327-025518"
+}

@@ -1,0 +1,45 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Track curves left ahead, WP31 bearing gives delta ~+33.2\u00b0 (left), continuing with steering_angle=15 at speed=1.5 to follow the curve while well-centered.",
+    "knowledge": [
+      "Track starts with a long straight along y\u22480.683 before curving right around x=6.3-7.3.",
+      "Big right curve begins around WP22-30 (x~6.3-7.2, y increases from 0.7 to 1.4).",
+      "After the right curve, track loops back along y\u22482.77 heading left.",
+      "Track total length ~17.7m, 121 waypoints.",
+      "Use steering_angle=0 on straights to avoid oscillation.",
+      "Prefer speed 1.5 on straights and gentle curves.",
+      "Car heading ~22\u00b0 (nearly due east-northeast), well-centered on track.",
+      "Right curve ahead requires progressive left steering (positive delta) to follow waypoints.",
+      "Steering_angle=15 at speed=1.5 is appropriate for delta ~30-35\u00b0.",
+      "No objects on track detected, boundary well clear on both sides."
+    ],
+    "movement_analysis": {
+      "x": [
+        6.5293,
+        6.6131,
+        6.698,
+        6.777
+      ],
+      "y": [
+        0.7205,
+        0.7527,
+        0.7957,
+        0.8493
+      ],
+      "heading": [
+        7.069,
+        11.232,
+        16.13,
+        22.182
+      ]
+    },
+    "waypoint_analysis": "Target WP31 at (7.272, 1.566): bearing=55.37\u00b0, delta=+33.19\u00b0 \u2192 moderate-left steer.",
+    "speed": 1.5,
+    "steering_angle": 15.0
+  },
+  "normalized_action": 10,
+  "steering_angle": 15.0,
+  "speed": 1.5,
+  "inference_time": 18.02366352081299,
+  "timestamp": "20260327-101257"
+}

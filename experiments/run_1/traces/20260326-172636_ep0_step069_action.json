@@ -1,0 +1,45 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Track curves right ahead, delta to target waypoint 53 is -20.14\u00b0 indicating a moderate right correction needed, applying -20 steering to follow the waypoint line through the right curve.",
+    "knowledge": [
+      "Track has a long straight section heading ~180\u00b0 (due left/west) along y\u22482.77",
+      "Large right-curving section begins around waypoint 48-55 (y increases toward 2.82+)",
+      "Car is consistently ~0.15-0.17m left of center through this section \u2014 slight left bias",
+      "Full circuit ~17.7m, speed 1.5 is max and appropriate for moderate curves",
+      "Use steering_angle=0 for delta <5\u00b0 to avoid oscillation on near-straight sections",
+      "Track width ~0.76m \u2014 0.17m left of center is safe but watch for tightening",
+      "Heading is ~-176\u00b0 (essentially due west), track curves right (south) ahead",
+      "Delta around -17 to -20\u00b0 in this section confirms consistent right curve",
+      "Speed 1.5 appropriate here; reduce only for sharp turns >30\u00b0 delta",
+      "Waypoints 48-53 show gradual right curve, delta increasing slightly each step"
+    ],
+    "movement_analysis": {
+      "x": [
+        5.77,
+        5.6765,
+        5.5756,
+        5.4822
+      ],
+      "y": [
+        2.6442,
+        2.6283,
+        2.613,
+        2.6036
+      ],
+      "yaw": [
+        176.825,
+        -179.042,
+        -176.744,
+        -176.1
+      ]
+    },
+    "waypoint_analysis": -20.14,
+    "speed": 1.0,
+    "steering_angle": -20.0
+  },
+  "normalized_action": 1,
+  "steering_angle": -20.0,
+  "speed": 1.0,
+  "inference_time": 16.06008553504944,
+  "timestamp": "20260326-172636"
+}

@@ -1,0 +1,48 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Car is back on track but heading -74.6\u00b0 while target waypoint 97 bears ~-117.7\u00b0, giving delta -43.1\u00b0 \u2014 need to steer right to follow the track curving downward (south).",
+    "knowledge": [
+      "Car recovered to track near x=0.99, y=3.10 after extended off-track left grass episode",
+      "Track curves sharply south/downward near waypoints 91-100 (x decreasing, y decreasing)",
+      "Heading must swing from -74\u00b0 toward -120\u00b0 or more to follow track south",
+      "Negative delta means steer right (negative steering_angle)",
+      "At delta ~43\u00b0, use speed=1.0-1.5 and steering=-20\u00b0",
+      "Track width 0.76m \u2014 narrow, stay centered while turning",
+      "is_left_of_center=true \u2014 car is slightly left, track curves right so this is acceptable",
+      "After sharp right turn, waypoints continue south then loop back east",
+      "Avoid overcorrecting \u2014 once delta < 15\u00b0, reduce steering to -5\u00b0",
+      "all_wheels_on_track=true confirmed \u2014 recovery successful"
+    ],
+    "movement_analysis": {
+      "x": [
+        1.291,
+        1.336,
+        1.336,
+        1.1,
+        0.987
+      ],
+      "y": [
+        3.343,
+        3.324,
+        3.324,
+        3.2,
+        3.101
+      ],
+      "yaw": [
+        -50.07,
+        -46.525,
+        -46.525,
+        -65.0,
+        -74.604
+      ]
+    },
+    "waypoint_analysis": -43.1,
+    "speed": 1.0,
+    "steering_angle": -20.0
+  },
+  "normalized_action": 1,
+  "steering_angle": -20.0,
+  "speed": 1.0,
+  "inference_time": 15.203525304794312,
+  "timestamp": "20260326-172636"
+}

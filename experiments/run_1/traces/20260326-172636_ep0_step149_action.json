@@ -1,0 +1,48 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Track ahead looks straight with slight right curve, car heading -105.7\u00b0 but target waypoint 91 bears -11.0\u00b0, giving delta +94.7\u00b0 \u2014 must continue maximum left steering at low speed to complete heading realignment.",
+    "knowledge": [
+      "Car in prolonged U-turn recovery near x=0.90, y=3.82 \u2014 heading slowly improving toward target ~-11\u00b0",
+      "Track runs roughly east (positive X direction) near waypoints 80-95",
+      "Large positive delta (~95\u00b0) requires maximum left steering (25\u00b0) at low speed (0.75)",
+      "Car is executing a very slow U-turn recovery \u2014 must persist with max left steer until delta < 50\u00b0",
+      "is_left_of_center=true means car is left of center \u2014 acceptable during recovery",
+      "Track width 0.76m \u2014 limited margin, must stay on track during realignment",
+      "Progress ~72.8% near waypoints 85-86, track appears straight ahead visually",
+      "Visual shows straight track ahead with dashed center line \u2014 car on track",
+      "Keep max left steering until heading approaches target bearing (~-20\u00b0 to 0\u00b0)",
+      "Once delta < 50\u00b0, reduce steering and increase speed to 1.0-1.5"
+    ],
+    "movement_analysis": {
+      "x": [
+        0.885,
+        0.889,
+        0.896,
+        0.903,
+        0.903
+      ],
+      "y": [
+        3.972,
+        3.916,
+        3.865,
+        3.822,
+        3.822
+      ],
+      "yaw": [
+        -114.092,
+        -109.152,
+        -106.496,
+        -105.709,
+        -105.709
+      ]
+    },
+    "waypoint_analysis": 94.71,
+    "speed": 0.75,
+    "steering_angle": 25.0
+  },
+  "normalized_action": 12,
+  "steering_angle": 25.0,
+  "speed": 0.75,
+  "inference_time": 15.428451776504517,
+  "timestamp": "20260326-172636"
+}

@@ -1,0 +1,48 @@
+{
+  "raw_action_dict": {
+    "reasoning": "Track curves right ahead but waypoint 36 is still to the left of current heading (delta=+21.94\u00b0), continuing with 15\u00b0 positive steering to follow the waypoint line through the curve.",
+    "knowledge": [
+      "Track has a long straight heading east (~0\u00b0), then sharp right curve around WP26-38",
+      "After right curve, track heads west around y=2.7-4.5 then loops back south",
+      "Positive steering = left turn, negative = right turn",
+      "On straights with |delta|<5\u00b0, use steering_angle=0 to avoid oscillation",
+      "Car is left of center (~0.17m) \u2014 acceptable entering right curve",
+      "Speed 1.5 is safe on moderate curves; reduce to 1.0 or 0.75 for sharp turns",
+      "Delta decreasing from +26\u00b0 to +22\u00b0 through this curve \u2014 smooth progression toward apex",
+      "After WP36+, heading will start decreasing (turning right/west) \u2014 prepare for negative steering",
+      "Waypoint target index = nearest_waypoints[1]+5 consistently used",
+      "Car progressing smoothly through right curve, heading increasing from 50\u00b0 to 66\u00b0"
+    ],
+    "movement_analysis": {
+      "x": [
+        7.03,
+        7.048,
+        7.062,
+        7.076,
+        7.092
+      ],
+      "y": [
+        1.34,
+        1.393,
+        1.432,
+        1.482,
+        1.565
+      ],
+      "yaw": [
+        53.3,
+        56.58,
+        59.0,
+        61.37,
+        66.34
+      ]
+    },
+    "waypoint_analysis": "Target WP36 at (7.114, 2.287): dy=0.722, dx=0.022, bearing=88.28\u00b0, delta=+21.94\u00b0 \u2192 moderate left, steer 15\u00b0",
+    "speed": 1.5,
+    "steering_angle": 15.0
+  },
+  "normalized_action": 10,
+  "steering_angle": 15.0,
+  "speed": 1.5,
+  "inference_time": 17.305811882019043,
+  "timestamp": "20260327-025518"
+}
