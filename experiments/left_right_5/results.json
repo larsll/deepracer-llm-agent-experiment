@@ -1,0 +1,923 @@
+{
+  "eu.anthropic.claude-sonnet-4-6": {
+    "correct": 10,
+    "total": 25,
+    "accuracy_pct": 40.0,
+    "runs": [
+      {
+        "run": 1,
+        "detected": "right",
+        "correct": true,
+        "usage": {
+          "input_tokens": 520,
+          "output_tokens": 157,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "## Track Analysis\n\nLooking at the image carefully, the track is **curving to the right**.\n\n### Observations:\n- The **dashed yellow centerline** starts roughly centered in the lower portion of the image but sweeps toward the **right side** as it extends into the distance\n- The **right white boundary line** is clearly visible and curves away to the right\n- The **left boundary** is not visible, indicating the car is positioned toward the left/center and the track bends rightward\n- The vanishing point of the road shifts to the **right**, confirming a **right-hand curve** ahead\n\n**Recommended action:** Steer **right** to follow the centerline and stay within track boundaries."
+      },
+      {
+        "run": 2,
+        "detected": "left",
+        "correct": false,
+        "usage": {
+          "input_tokens": 520,
+          "output_tokens": 159,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "## Track Analysis\n\nLooking at the image carefully, the track is **curving to the left**.\n\n### Evidence:\n- The **dashed yellow centerline** visibly bends toward the **left side** of the image as it extends into the distance\n- The **right white boundary line** sweeps inward from the right and curves leftward ahead\n- The road surface and perspective lines all converge toward the **upper-left** portion of the image\n- The vanishing point of the track is positioned to the **left of center**\n\n### Conclusion:\nThe DeepRacer is approaching a **left-hand curve**. The car should begin steering **left** to follow the centerline and stay within the track boundaries."
+      },
+      {
+        "run": 3,
+        "detected": "left",
+        "correct": false,
+        "usage": {
+          "input_tokens": 520,
+          "output_tokens": 145,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "## Track Analysis\n\nLooking at the image carefully, the track is **curving to the left**.\n\n### Evidence:\n- The **dashed yellow centerline** visibly bends toward the **left side** of the image as it extends into the distance\n- The **right white boundary line** sweeps inward (leftward) ahead\n- The road surface narrows and shifts to the **left** in the mid-to-far distance\n- The overall perspective of the track geometry confirms a **left-hand curve** ahead\n\n### Recommended Action:\nThe DeepRacer should **steer left** to follow the centerline and remain within the track boundaries."
+      },
+      {
+        "run": 4,
+        "detected": "left",
+        "correct": false,
+        "usage": {
+          "input_tokens": 520,
+          "output_tokens": 135,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "## Track Analysis\n\nLooking at the image carefully, the track is **curving to the left**.\n\n### Evidence:\n- The **dashed yellow centerline** visibly bends toward the **left side** of the image as it extends into the distance\n- The **right white boundary line** sweeps inward (leftward) ahead\n- The road surface narrows and shifts to the **left** in the mid-to-far distance\n- The overall perspective of the track geometry confirms a **left-hand curve** ahead\n\nThe car should **steer left** to follow the centerline and stay within the track boundaries."
+      },
+      {
+        "run": 5,
+        "detected": "left",
+        "correct": false,
+        "usage": {
+          "input_tokens": 520,
+          "output_tokens": 146,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "## Track Analysis\n\nLooking carefully at the image, the track is **curving to the left**.\n\n### Evidence:\n- The **dashed yellow centerline** visibly bends toward the **left side** of the image as it extends into the distance\n- The **right white boundary line** sweeps inward (leftward) ahead\n- The vanishing point of the track shifts to the **left** rather than remaining centered\n- The road surface narrows and curves in the **left direction** in the mid-to-far distance\n\n### Recommended Action:\nThe DeepRacer should **steer left** to follow the centerline and stay within track boundaries."
+      },
+      {
+        "run": 6,
+        "detected": "left",
+        "correct": false,
+        "usage": {
+          "input_tokens": 520,
+          "output_tokens": 155,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "## Track Analysis\n\nLooking at the image carefully, the track is **curving to the left**.\n\n### Evidence:\n- The **dashed yellow centerline** visibly bends toward the **left side** of the image as it extends into the distance\n- The **right white boundary line** sweeps inward (leftward) ahead\n- The track surface and perspective lines all converge toward the **upper-left** portion of the image\n- The vanishing point of the road is positioned to the **left of center**\n\n### Summary:\nThe DeepRacer is approaching a **left-hand curve**. The car should begin steering **left** to follow the centerline and stay within the track boundaries."
+      },
+      {
+        "run": 7,
+        "detected": "right",
+        "correct": true,
+        "usage": {
+          "input_tokens": 520,
+          "output_tokens": 161,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "## Track Analysis\n\nLooking at the image carefully, the track is **curving to the right**.\n\n### Observations:\n- The **dashed yellow centerline** starts roughly centered in the lower portion of the image but sweeps toward the **right side** as it extends into the distance\n- The **right white boundary line** is clearly visible and curves away to the right\n- The **left boundary** is not visible, indicating the car is positioned toward the left/center of the track as it bends rightward\n- The vanishing point of the track shifts to the **right**, confirming a **right-hand curve** ahead\n\n**Recommended action:** Steer to the **right** to follow the centerline and stay within track boundaries."
+      },
+      {
+        "run": 8,
+        "detected": "left",
+        "correct": false,
+        "usage": {
+          "input_tokens": 520,
+          "output_tokens": 121,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "## Track Analysis\n\nLooking at the image carefully, the track is **curving to the left**.\n\n### Evidence:\n- The **dashed yellow centerline** visibly bends toward the **left side** of the image as it extends into the distance\n- The **right white boundary line** sweeps inward (leftward) ahead\n- The **vanishing point** of the track shifts to the **left** rather than remaining centered\n- The road surface narrows and curves in the **left direction**\n\n**Conclusion: The track is turning LEFT.**"
+      },
+      {
+        "run": 9,
+        "detected": "left",
+        "correct": false,
+        "usage": {
+          "input_tokens": 520,
+          "output_tokens": 160,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "## Track Analysis\n\nLooking at the image carefully, the track is **curving to the left**.\n\n### Evidence:\n- The **dashed yellow centerline** starts near the bottom-left of the image and arcs toward the **left side** as it extends into the distance\n- The **right white boundary line** sweeps prominently into view on the right side and curves leftward ahead\n- The **vanishing point** of the track bends toward the **left** in the mid-to-far distance\n- The overall road surface geometry confirms a **left-hand curve** ahead\n\n### Recommendation for the DeepRacer:\nThe car should **steer left** to follow the centerline and stay within the track boundaries."
+      },
+      {
+        "run": 10,
+        "detected": "left",
+        "correct": false,
+        "usage": {
+          "input_tokens": 520,
+          "output_tokens": 153,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "## Track Analysis\n\nLooking at the image carefully, the track is **curving to the left**.\n\n### Evidence:\n- The **dashed yellow centerline** visibly bends toward the **left side** of the image as it extends into the distance\n- The **right white boundary line** sweeps inward (leftward) ahead\n- The **vanishing point** of the track shifts to the **left** rather than remaining centered\n- The road surface narrows and curves in the **left direction** in the mid-to-far distance\n\n### Conclusion:\n**The track is curving to the LEFT.** The car should steer left to follow the centerline and stay within the track boundaries."
+      },
+      {
+        "run": 11,
+        "detected": "right",
+        "correct": true,
+        "usage": {
+          "input_tokens": 520,
+          "output_tokens": 161,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "## Track Analysis\n\nLooking at the image carefully, the track is **curving to the right**.\n\n### Observations:\n- The **dashed yellow centerline** starts roughly centered in the lower portion of the image but sweeps toward the **right side** as it extends into the distance\n- The **right white boundary line** is clearly visible and curves away to the right\n- The **left boundary** is not visible, indicating the car is positioned toward the left/center of the track as it bends rightward\n- The vanishing point of the track shifts to the **right**, confirming a **right-hand curve** ahead\n\n**Recommended action:** Steer to the **right** to follow the centerline and stay within track boundaries."
+      },
+      {
+        "run": 12,
+        "detected": "left",
+        "correct": false,
+        "usage": {
+          "input_tokens": 520,
+          "output_tokens": 153,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "## Track Analysis\n\nLooking at the image carefully, the track is **curving to the left**.\n\n### Evidence:\n- The **dashed yellow centerline** visibly bends toward the **left side** of the image as it extends into the distance\n- The **right white boundary line** sweeps inward from the right, confirming a leftward curve\n- The road surface and perspective lines all converge toward the **upper-left** portion of the frame\n- The vanishing point of the track is positioned to the **left of center**\n\n### Summary:\n**The track is curving to the LEFT.** The car should steer left to follow the centerline and stay within the track boundaries."
+      },
+      {
+        "run": 13,
+        "detected": "right",
+        "correct": true,
+        "usage": {
+          "input_tokens": 520,
+          "output_tokens": 135,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "## Track Analysis\n\nLooking at the image carefully, the track is **curving to the right**.\n\n### Observations:\n- The **dashed yellow centerline** starts near the left-center of the image and sweeps toward the **right** as it extends into the distance\n- The **right white boundary line** is clearly visible and curves away to the right\n- The **left boundary** is not visible, indicating the car is positioned toward the left side of the track\n- The vanishing point of the road curves distinctly to the **right side** of the frame\n\n**Conclusion: The track curves to the RIGHT.**"
+      },
+      {
+        "run": 14,
+        "detected": "right",
+        "correct": true,
+        "usage": {
+          "input_tokens": 520,
+          "output_tokens": 178,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "## Track Analysis\n\nLooking at the image carefully, the track is **curving to the right**.\n\n### Observations:\n- The **dashed yellow centerline** starts roughly centered in the lower portion of the image and sweeps toward the **right side** as it extends into the distance\n- The **right white boundary line** curves away to the right and disappears into the distance on the right side\n- The **left boundary** is not visible, suggesting the car is positioned toward the left side of the track as it bends right\n- The vanishing point of the road is clearly shifted to the **right of center**\n\n### Conclusion:\nThe track ahead is executing a **right-hand curve**. The DeepRacer should steer to the **right** to follow the centerline and stay within track boundaries."
+      },
+      {
+        "run": 15,
+        "detected": "left",
+        "correct": false,
+        "usage": {
+          "input_tokens": 520,
+          "output_tokens": 157,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "## Track Analysis\n\nLooking at the image carefully, the track is **curving to the left**.\n\n### Evidence:\n- The **dashed yellow centerline** visibly bends toward the **left side** of the image as it extends into the distance\n- The **right white boundary line** sweeps inward from the right and curves leftward ahead\n- The road surface narrows and shifts to the **left** in the mid-to-far distance\n- The perspective of the track clearly shows a **left-hand curve** beginning in the near-to-mid distance\n\n### Summary:\n> **The track curves to the LEFT.** The car should begin steering left to follow the centerline and stay within the track boundaries."
+      },
+      {
+        "run": 16,
+        "detected": "left",
+        "correct": false,
+        "usage": {
+          "input_tokens": 520,
+          "output_tokens": 146,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "## Track Analysis\n\nLooking at the image carefully, the track is **curving to the left**.\n\n### Evidence:\n- The **dashed yellow centerline** starts near the bottom-center of the image and sweeps toward the **left** as it extends into the distance\n- The **right white boundary line** is clearly visible and curves leftward\n- The **vanishing point** of the track is positioned to the **upper-left** of the image\n- The road surface narrows and bends in the **left direction**\n\n### Recommended Action:\nThe DeepRacer should **steer left** to follow the centerline and stay within the track boundaries."
+      },
+      {
+        "run": 17,
+        "detected": "right",
+        "correct": true,
+        "usage": {
+          "input_tokens": 520,
+          "output_tokens": 184,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "## Track Analysis\n\nLooking at the image carefully, the track is **curving to the right**.\n\n### Observations:\n- The **dashed yellow centerline** starts roughly centered in the lower portion of the image and sweeps toward the **right side** as it extends into the distance\n- The **right white boundary line** curves away to the right and disappears into the upper-right area of the image\n- The **left boundary** is not visible, suggesting the car is positioned toward the left side of the track as it enters a right-hand bend\n- The vanishing point of the road is clearly shifted to the **right of center**\n\n### Conclusion:\nThe track ahead is executing a **right-hand curve (turning right)**. The DeepRacer should begin steering to the right to follow the centerline and stay within track boundaries."
+      },
+      {
+        "run": 18,
+        "detected": "left",
+        "correct": false,
+        "usage": {
+          "input_tokens": 520,
+          "output_tokens": 153,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "## Track Analysis\n\nLooking at the image carefully, the track is **curving to the left**.\n\n### Evidence:\n- The **dashed yellow centerline** visibly bends toward the **left side** of the image as it extends into the distance\n- The **right white boundary line** sweeps inward (toward the left) as the track progresses forward\n- The vanishing point of the track shifts to the **upper-left** portion of the image\n- The road surface narrows and curves in the **leftward direction**\n\n### Summary:\nThe DeepRacer is approaching a **left-hand curve**. To stay centered on the track, the car should begin steering **left**."
+      },
+      {
+        "run": 19,
+        "detected": "right",
+        "correct": true,
+        "usage": {
+          "input_tokens": 520,
+          "output_tokens": 158,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "## Track Analysis\n\nLooking at the image carefully, the track is **curving to the right**.\n\n### Observations:\n- The **dashed yellow centerline** starts near the left-center of the image and sweeps toward the **right** as it extends into the distance\n- The **right white boundary line** is clearly visible and curves away to the right\n- The **left boundary** is not visible, indicating the car is positioned toward the left side of the track\n- The vanishing point of the road curves distinctly to the **right**\n\n### Conclusion:\n**The track is curving to the RIGHT.** The DeepRacer should steer right to follow the centerline and stay within the track boundaries."
+      },
+      {
+        "run": 20,
+        "detected": "left",
+        "correct": false,
+        "usage": {
+          "input_tokens": 520,
+          "output_tokens": 151,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "## Track Analysis\n\nLooking at the image carefully, the track is **curving to the left**.\n\n### Evidence:\n- The **dashed yellow centerline** visibly bends toward the **left side** of the image as it extends into the distance\n- The **right white boundary line** sweeps inward (toward the left) as the track progresses forward\n- The vanishing point of the track shifts to the **upper-left** portion of the image\n- The road surface narrows and curves in the **leftward direction**\n\n### Summary:\n**The track is curving to the LEFT.** The car should steer left to follow the centerline and stay within the track boundaries."
+      },
+      {
+        "run": 21,
+        "detected": "right",
+        "correct": true,
+        "usage": {
+          "input_tokens": 520,
+          "output_tokens": 142,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "## Track Analysis\n\nLooking at the image carefully, the track is **curving to the right**.\n\n### Observations:\n- The **dashed yellow centerline** starts near the left-center of the image and sweeps toward the **right** as it extends into the distance\n- The **right white boundary line** curves away to the right and is clearly visible along the right side\n- The **left boundary** is not visible, indicating the car is positioned toward the left side of the track as it bends right\n- The vanishing point of the track shifts to the **right side** of the image\n\n**Conclusion: The track curves to the RIGHT.**"
+      },
+      {
+        "run": 22,
+        "detected": "left",
+        "correct": false,
+        "usage": {
+          "input_tokens": 520,
+          "output_tokens": 155,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "## Track Analysis\n\nLooking at the image carefully, the track is **curving to the left**.\n\n### Evidence:\n- The **dashed yellow centerline** visibly bends toward the **left side** of the image as it extends into the distance\n- The **right white boundary line** sweeps inward (leftward) ahead\n- The track surface and perspective lines all converge toward the **upper-left** portion of the image\n- The vanishing point of the road is positioned to the **left of center**\n\n### Summary:\nThe DeepRacer is approaching a **left-hand curve**. The car should begin steering **left** to follow the centerline and stay within the track boundaries."
+      },
+      {
+        "run": 23,
+        "detected": "right",
+        "correct": true,
+        "usage": {
+          "input_tokens": 520,
+          "output_tokens": 158,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "## Track Analysis\n\nLooking at the image carefully, the track is **curving to the right**.\n\n### Observations:\n- The **dashed yellow centerline** starts near the left-center of the image and sweeps toward the **right** as it extends into the distance\n- The **right white boundary line** is clearly visible and curves away to the right\n- The **left boundary** is not visible, indicating the car is positioned toward the left side of the track\n- The vanishing point of the road curves distinctly to the **right side** of the frame\n\n### Conclusion:\n**The track is curving to the RIGHT.** The car should steer right to follow the centerline and stay within the track boundaries."
+      },
+      {
+        "run": 24,
+        "detected": "left",
+        "correct": false,
+        "usage": {
+          "input_tokens": 520,
+          "output_tokens": 156,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "## Track Analysis\n\nLooking at the image carefully, the track is **curving to the left**.\n\n### Evidence:\n- The **dashed yellow centerline** visibly bends toward the **left side** of the image as it extends into the distance\n- The **right white boundary line** sweeps inward from the right and curves leftward ahead\n- The road surface and perspective lines all converge toward the **upper-left** portion of the image\n- The vanishing point of the track is positioned to the **left of center**\n\n### Summary:\nThe DeepRacer is approaching a **left-hand curve**. To stay on track and near the centerline, the car should **steer left**."
+      },
+      {
+        "run": 25,
+        "detected": "right",
+        "correct": true,
+        "usage": {
+          "input_tokens": 520,
+          "output_tokens": 135,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "## Track Analysis\n\nLooking at the image carefully, the track is **curving to the right**.\n\n### Observations:\n- The **dashed yellow centerline** starts near the left-center of the image and sweeps toward the **right** as it extends into the distance\n- The **right white boundary line** is clearly visible and curves away to the right\n- The **left boundary** is not visible, indicating the car is positioned toward the left side of the track\n- The vanishing point of the road curves distinctly to the **right side** of the frame\n\n**Conclusion: The track curves to the RIGHT.**"
+      }
+    ]
+  },
+  "eu.amazon.nova-pro-v1:0": {
+    "correct": 25,
+    "total": 25,
+    "accuracy_pct": 100.0,
+    "runs": [
+      {
+        "run": 1,
+        "detected": "right",
+        "correct": true,
+        "usage": {
+          "input_tokens": 1756,
+          "output_tokens": 35,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "The track in this image is curving to the right. The dashed yellow centerline and the white boundary lines on both sides of the track show a clear rightward curve."
+      },
+      {
+        "run": 2,
+        "detected": "right",
+        "correct": true,
+        "usage": {
+          "input_tokens": 1756,
+          "output_tokens": 40,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "The track in this image is curving to the right. The dashed yellow centerline and the white boundary lines on both sides of the track show a clear rightward curve as the track extends ahead."
+      },
+      {
+        "run": 3,
+        "detected": "right",
+        "correct": true,
+        "usage": {
+          "input_tokens": 1756,
+          "output_tokens": 42,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "The track in this image is curving to the right. The dashed yellow centerline and the white boundary lines on both sides of the track show a clear rightward curve as the track extends into the distance."
+      },
+      {
+        "run": 4,
+        "detected": "right",
+        "correct": true,
+        "usage": {
+          "input_tokens": 1756,
+          "output_tokens": 42,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "The track in this image is curving to the right. The dashed yellow centerline and the white boundary lines on both sides of the track show a clear rightward curve as the track extends into the distance."
+      },
+      {
+        "run": 5,
+        "detected": "right",
+        "correct": true,
+        "usage": {
+          "input_tokens": 1756,
+          "output_tokens": 42,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "The track in this image is curving to the right. The dashed yellow centerline and the white boundary lines on both sides of the track show a clear rightward curve as the track extends into the distance."
+      },
+      {
+        "run": 6,
+        "detected": "right",
+        "correct": true,
+        "usage": {
+          "input_tokens": 1756,
+          "output_tokens": 42,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "The track in this image is curving to the right. The dashed yellow centerline and the white boundary lines on both sides of the track show a clear rightward curve as the track extends into the distance."
+      },
+      {
+        "run": 7,
+        "detected": "right",
+        "correct": true,
+        "usage": {
+          "input_tokens": 1756,
+          "output_tokens": 42,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "The track in this image is curving to the right. The dashed yellow centerline and the white boundary lines on both sides of the track show a clear rightward curve as the track extends into the distance."
+      },
+      {
+        "run": 8,
+        "detected": "right",
+        "correct": true,
+        "usage": {
+          "input_tokens": 1756,
+          "output_tokens": 35,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "The track in this image is curving to the right. The dashed yellow centerline and the white boundary lines on both sides of the track show a clear rightward curve."
+      },
+      {
+        "run": 9,
+        "detected": "right",
+        "correct": true,
+        "usage": {
+          "input_tokens": 1756,
+          "output_tokens": 40,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "The track in this image is curving to the right. The dashed yellow centerline and the white boundary lines on both sides of the track show a clear rightward curve as the track extends forward."
+      },
+      {
+        "run": 10,
+        "detected": "right",
+        "correct": true,
+        "usage": {
+          "input_tokens": 1757,
+          "output_tokens": 50,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "The track in this image is curving to the right. The dashed yellow centerline and the white boundary lines on both sides of the track show a clear rightward curve. The curvature is gradual, indicating a smooth turn rather than a sharp corner."
+      },
+      {
+        "run": 11,
+        "detected": "right",
+        "correct": true,
+        "usage": {
+          "input_tokens": 1757,
+          "output_tokens": 42,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "The track in this image is curving to the right. The dashed yellow centerline and the white boundary lines on both sides of the track show a clear rightward curve as the track extends into the distance."
+      },
+      {
+        "run": 12,
+        "detected": "right",
+        "correct": true,
+        "usage": {
+          "input_tokens": 1757,
+          "output_tokens": 42,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "The track in this image is curving to the right. The dashed yellow centerline and the white boundary lines on both sides of the track show a clear rightward curve as the track extends into the distance."
+      },
+      {
+        "run": 13,
+        "detected": "right",
+        "correct": true,
+        "usage": {
+          "input_tokens": 1757,
+          "output_tokens": 42,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "The track in this image is curving to the right. The dashed yellow centerline and the white boundary lines on both sides of the track show a clear rightward curve as the track extends into the distance."
+      },
+      {
+        "run": 14,
+        "detected": "right",
+        "correct": true,
+        "usage": {
+          "input_tokens": 1757,
+          "output_tokens": 42,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "The track in this image is curving to the right. The dashed yellow centerline and the white boundary lines on both sides of the track show a clear rightward curve as the track extends into the distance."
+      },
+      {
+        "run": 15,
+        "detected": "right",
+        "correct": true,
+        "usage": {
+          "input_tokens": 1757,
+          "output_tokens": 42,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "The track in this image is curving to the right. The dashed yellow centerline and the white boundary lines on both sides of the track show a clear rightward curve as the track extends into the distance."
+      },
+      {
+        "run": 16,
+        "detected": "right",
+        "correct": true,
+        "usage": {
+          "input_tokens": 1757,
+          "output_tokens": 66,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "The track in this image is curving to the right. The dashed yellow centerline and the white boundary lines on both sides of the track show a clear rightward curve. The curve is gradual, and the track appears to be widening slightly as it curves, which is typical for a right-hand turn on a race track."
+      },
+      {
+        "run": 17,
+        "detected": "right",
+        "correct": true,
+        "usage": {
+          "input_tokens": 1757,
+          "output_tokens": 42,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "The track in this image is curving to the right. The dashed yellow centerline and the white boundary lines on both sides of the track show a clear rightward curve as the track extends into the distance."
+      },
+      {
+        "run": 18,
+        "detected": "right",
+        "correct": true,
+        "usage": {
+          "input_tokens": 1757,
+          "output_tokens": 42,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "The track in this image is curving to the right. The dashed yellow centerline and the white boundary lines on both sides of the track show a clear rightward curve as the track extends into the distance."
+      },
+      {
+        "run": 19,
+        "detected": "right",
+        "correct": true,
+        "usage": {
+          "input_tokens": 1757,
+          "output_tokens": 42,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "The track in this image is curving to the right. The dashed yellow centerline and the white boundary lines on both sides of the track show a clear rightward curve as the track extends into the distance."
+      },
+      {
+        "run": 20,
+        "detected": "right",
+        "correct": true,
+        "usage": {
+          "input_tokens": 1757,
+          "output_tokens": 42,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "The track in this image is curving to the right. The dashed yellow centerline and the white boundary lines on both sides of the track show a clear rightward curve as the track extends into the distance."
+      },
+      {
+        "run": 21,
+        "detected": "right",
+        "correct": true,
+        "usage": {
+          "input_tokens": 1757,
+          "output_tokens": 42,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "The track in this image is curving to the right. The dashed yellow centerline and the white boundary lines on both sides of the track show a clear rightward curve as the track extends into the distance."
+      },
+      {
+        "run": 22,
+        "detected": "right",
+        "correct": true,
+        "usage": {
+          "input_tokens": 1757,
+          "output_tokens": 42,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "The track in this image is curving to the right. The dashed yellow centerline and the white boundary lines on both sides of the track show a clear rightward curve as the track extends into the distance."
+      },
+      {
+        "run": 23,
+        "detected": "right",
+        "correct": true,
+        "usage": {
+          "input_tokens": 1757,
+          "output_tokens": 42,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "The track in this image is curving to the right. The dashed yellow centerline and the white boundary lines on both sides of the track show a clear rightward curve as the track extends into the distance."
+      },
+      {
+        "run": 24,
+        "detected": "right",
+        "correct": true,
+        "usage": {
+          "input_tokens": 1757,
+          "output_tokens": 37,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "The track in this image is curving to the right. The dashed yellow centerline and the white boundary lines on both sides show a clear rightward curve as the track extends ahead."
+      },
+      {
+        "run": 25,
+        "detected": "right",
+        "correct": true,
+        "usage": {
+          "input_tokens": 1757,
+          "output_tokens": 42,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "The track in this image is curving to the right. The dashed yellow centerline and the white boundary lines on both sides of the track show a clear rightward curve as the track extends into the distance."
+      }
+    ]
+  },
+  "eu.mistral.pixtral-large-2502-v1:0": {
+    "correct": 25,
+    "total": 25,
+    "accuracy_pct": 100.0,
+    "runs": [
+      {
+        "run": 1,
+        "detected": "right",
+        "correct": true,
+        "usage": {
+          "input_tokens": 1328,
+          "output_tokens": 44,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "The track ahead in the image is curving to the right. This can be observed from the way the dashed yellow centerline and the white boundary lines on the sides of the track are bending towards the right."
+      },
+      {
+        "run": 2,
+        "detected": "right",
+        "correct": true,
+        "usage": {
+          "input_tokens": 1328,
+          "output_tokens": 41,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "The track ahead in the image is curving to the right. This is evident from the way the white boundary lines and the dashed yellow centerline are angling towards the right side of the image."
+      },
+      {
+        "run": 3,
+        "detected": "right",
+        "correct": true,
+        "usage": {
+          "input_tokens": 1328,
+          "output_tokens": 44,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "The track ahead in the image is curving to the right. This can be observed from the way the dashed yellow centerline and the white boundary lines on the sides of the track are bending towards the right."
+      },
+      {
+        "run": 4,
+        "detected": "right",
+        "correct": true,
+        "usage": {
+          "input_tokens": 1328,
+          "output_tokens": 42,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "The track ahead in the image is curving to the right. This can be observed from the way the white boundary lines and the dashed yellow centerline are angling towards the right side of the image."
+      },
+      {
+        "run": 5,
+        "detected": "right",
+        "correct": true,
+        "usage": {
+          "input_tokens": 1328,
+          "output_tokens": 44,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "The track ahead in the image is curving to the right. This can be determined by observing the direction of the white boundary lines and the dashed yellow centerline, which both indicate a turn to the right."
+      },
+      {
+        "run": 6,
+        "detected": "right",
+        "correct": true,
+        "usage": {
+          "input_tokens": 1328,
+          "output_tokens": 44,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "The track ahead in the image is curving to the right. This is evident from the way the white boundary line on the right and the dashed yellow centerline are angling towards the right side of the image."
+      },
+      {
+        "run": 7,
+        "detected": "right",
+        "correct": true,
+        "usage": {
+          "input_tokens": 1328,
+          "output_tokens": 42,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "The track ahead in the image is curving to the right. This can be observed from the way the white boundary lines and the dashed yellow centerline are angling towards the right side of the image."
+      },
+      {
+        "run": 8,
+        "detected": "right",
+        "correct": true,
+        "usage": {
+          "input_tokens": 1328,
+          "output_tokens": 41,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "The track ahead in the image is curving to the right. This is evident from the way the white boundary lines and the dashed yellow centerline are angling towards the right side of the image."
+      },
+      {
+        "run": 9,
+        "detected": "right",
+        "correct": true,
+        "usage": {
+          "input_tokens": 1328,
+          "output_tokens": 45,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "The track ahead in the image is curving to the right. This is evident from the way the white boundary line on the right and the dashed yellow centerline are both bending towards the right side of the image."
+      },
+      {
+        "run": 10,
+        "detected": "right",
+        "correct": true,
+        "usage": {
+          "input_tokens": 1329,
+          "output_tokens": 45,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "The track ahead in the image is curving to the right. This is evident from the way the white boundary line on the right and the dashed yellow centerline are both bending towards the right side of the image."
+      },
+      {
+        "run": 11,
+        "detected": "right",
+        "correct": true,
+        "usage": {
+          "input_tokens": 1329,
+          "output_tokens": 44,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "The track ahead in the image is curving to the right. This can be observed from the way the dashed yellow centerline and the white boundary lines on the sides of the track are bending towards the right."
+      },
+      {
+        "run": 12,
+        "detected": "right",
+        "correct": true,
+        "usage": {
+          "input_tokens": 1329,
+          "output_tokens": 41,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "The track ahead in the image is curving to the right. This is evident from the way the white boundary lines and the dashed yellow centerline are angling towards the right side of the image."
+      },
+      {
+        "run": 13,
+        "detected": "right",
+        "correct": true,
+        "usage": {
+          "input_tokens": 1329,
+          "output_tokens": 41,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "The track ahead in the image is curving to the right. This is evident from the way the white boundary lines and the dashed yellow centerline are angling towards the right side of the image."
+      },
+      {
+        "run": 14,
+        "detected": "right",
+        "correct": true,
+        "usage": {
+          "input_tokens": 1329,
+          "output_tokens": 43,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "The track ahead in the image is curving to the right. This can be determined by observing the orientation of the dashed yellow centerline and the white boundary lines, which indicate a turn to the right."
+      },
+      {
+        "run": 15,
+        "detected": "right",
+        "correct": true,
+        "usage": {
+          "input_tokens": 1329,
+          "output_tokens": 41,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "The track ahead in the image is curving to the right. This is evident from the way the white boundary lines and the dashed yellow centerline are angling towards the right side of the image."
+      },
+      {
+        "run": 16,
+        "detected": "right",
+        "correct": true,
+        "usage": {
+          "input_tokens": 1329,
+          "output_tokens": 45,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "The track ahead in the image is curving to the right. This can be observed from the way the dashed yellow centerline and the white boundary lines on the right are bending towards the right side of the image."
+      },
+      {
+        "run": 17,
+        "detected": "right",
+        "correct": true,
+        "usage": {
+          "input_tokens": 1329,
+          "output_tokens": 45,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "The track ahead in the image is curving to the right. This can be observed from the way the dashed yellow centerline and the white boundary lines on the right side of the track are bending towards the right."
+      },
+      {
+        "run": 18,
+        "detected": "right",
+        "correct": true,
+        "usage": {
+          "input_tokens": 1329,
+          "output_tokens": 42,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "The track ahead in the image is curving to the right. This can be observed from the way the white boundary lines and the dashed yellow centerline are angling towards the right side of the image."
+      },
+      {
+        "run": 19,
+        "detected": "right",
+        "correct": true,
+        "usage": {
+          "input_tokens": 1329,
+          "output_tokens": 41,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "The track ahead in the image is curving to the right. This is evident from the way the white boundary lines and the dashed yellow centerline are angling towards the right side of the image."
+      },
+      {
+        "run": 20,
+        "detected": "right",
+        "correct": true,
+        "usage": {
+          "input_tokens": 1329,
+          "output_tokens": 44,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "The track ahead in the image is curving to the right. This can be determined by observing the direction of the white boundary lines and the dashed yellow centerline, which both indicate a turn to the right."
+      },
+      {
+        "run": 21,
+        "detected": "right",
+        "correct": true,
+        "usage": {
+          "input_tokens": 1329,
+          "output_tokens": 41,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "The track ahead in the image is curving to the right. This is evident from the way the white boundary lines and the dashed yellow centerline are angling towards the right side of the image."
+      },
+      {
+        "run": 22,
+        "detected": "right",
+        "correct": true,
+        "usage": {
+          "input_tokens": 1329,
+          "output_tokens": 42,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "The track ahead in the image is curving to the right. This can be observed from the way the white boundary lines and the dashed yellow centerline are angling towards the right side of the image."
+      },
+      {
+        "run": 23,
+        "detected": "right",
+        "correct": true,
+        "usage": {
+          "input_tokens": 1329,
+          "output_tokens": 41,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "The track ahead in the image is curving to the right. This is evident from the way the white boundary lines and the dashed yellow centerline are angling towards the right side of the image."
+      },
+      {
+        "run": 24,
+        "detected": "right",
+        "correct": true,
+        "usage": {
+          "input_tokens": 1329,
+          "output_tokens": 44,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "The track ahead in the image is curving to the right. This is evident from the way the white boundary line on the right and the dashed yellow centerline are angling towards the right side of the image."
+      },
+      {
+        "run": 25,
+        "detected": "right",
+        "correct": true,
+        "usage": {
+          "input_tokens": 1329,
+          "output_tokens": 41,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        },
+        "response": "The track ahead in the image is curving to the right. This is evident from the way the white boundary lines and the dashed yellow centerline are angling towards the right side of the image."
+      }
+    ]
+  }
+}

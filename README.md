@@ -54,42 +54,39 @@ The primary limitation is latency. At ~15–19 seconds per decision step, a sing
 
 ---
 
+## Turn Detection Benchmark
+
+A separate benchmark was run to test whether vision-language models can reliably detect track direction from a single DeepRacer camera image — without any numeric state data. Three models were tested: **Claude Sonnet 4.6**, **Amazon Nova Pro**, and **Mistral Pixtral Large**, each asked to state the turn direction (left, right, or straight) from the image alone.
+
+Five experiments were run, covering left turns, right turns, and a straight section, at both the native DeepRacer camera resolution (160×120) and at 640×480 to test the effect of image quality.
+
+Key results:
+
+- **Nova Pro** was the most reliable, correctly identifying all three directions at both resolutions.
+- **Claude** improved dramatically with higher resolution on left turns (24% → 100%), but retained a partial inversion bias on right turns even at 640×480. At the native 160×120 resolution it performed poorly on curves, despite simultaneously issuing correct steering commands when numeric state was also available — consistent with the heading-delta vs. image disagreement described in the main experiment.
+- **Pixtral** always output "right" regardless of image content or resolution. Its 100% score on right-turn images is coincidental and does not reflect genuine detection.
+
+See [docs/turn_detection_analysis.md](docs/turn_detection_analysis.md) for full results and per-model analysis.
+
+The benchmark script is available in `scripts/` and accepts any image as input.
+
+---
+
 ## Repository Structure
 
 ```
-docs/
-  analysis.md                        # Quantitative comparison across all three runs
-  lap_story_run3_20260327-101257.md  # Step-by-step narrative of run 3
-  simapp_implementation.md           # How the LLM agent was wired into the SimApp
-  running_your_own_experiment.md
-
+docs/                     # Analysis documents and experiment write-ups
+scripts/                  # Utility scripts (turn detection benchmark)
+images/                   # Higher-resolution reference images used in benchmarking
 experiments/
   evaluation_params.yaml
-
-  run_1/                         # 2026-03-26, 219 steps — 2 off-track events
-    config/model_metadata.json
-    traces/                      # Raw LLM traces (request, response, image)
-    outputs/
-      simtrace.csv
-      mp4/
-        camera-pip.mp4           # Picture-in-picture camera recording
-
-  run_2/                         # 2026-03-27 03:00, 248 steps — 5 off-track events
-    config/model_metadata.json
-    traces/
-    outputs/
-      simtrace.csv
-      mp4/
-        camera-pip.mp4           # Picture-in-picture camera recording
-
-  run_3/                         # 2026-03-27 10:00, 214 steps — 0 off-track events ✓
-    config/model_metadata.json
-    traces/
-    outputs/
-      simtrace.csv
-      mp4/
-        camera-pip.mp4           # Picture-in-picture camera recording
+  run_1/                  # 2026-03-26, 219 steps — 2 off-track events
+  run_2/                  # 2026-03-27 03:00, 248 steps — 5 off-track events
+  run_3/                  # 2026-03-27 10:00, 214 steps — 0 off-track events ✓
+  left_right_1–5/         # Turn detection benchmark experiments
 ```
+
+Each `run_N` folder contains the model config, raw LLM traces (request/response/image per step), simtrace CSV output, and a picture-in-picture camera recording.
 
 ---
 
@@ -97,6 +94,7 @@ experiments/
 
 - [docs/analysis.md](docs/analysis.md) — quantitative breakdown of all three runs: latency distributions, per-run telemetry, cost estimates
 - [docs/lap_story_run3_20260327-101257.md](docs/lap_story_run3_20260327-101257.md) — step-by-step narrative of run 3
+- [docs/turn_detection_analysis.md](docs/turn_detection_analysis.md) — turn detection benchmark results across models and resolutions
 - [docs/simapp_implementation.md](docs/simapp_implementation.md) — how the LLM agent was wired into the DeepRacer SimApp
 - [docs/running_your_own_experiment.md](docs/running_your_own_experiment.md) — how to replicate or extend the experiment
 
