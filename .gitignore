@@ -26,3 +26,7 @@ tmp/
 
 # Jupyter Notebook
 .ipynb_checkpoints
+
+# Python environment
+.venv/
+venv/

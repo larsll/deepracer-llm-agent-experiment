@@ -28,6 +28,8 @@ All three full evaluation runs completed the lap:
 
 **The LLM can successfully navigate the track** without any task-specific fine-tuning — using only a well-crafted system prompt and the rolling camera feed. Run 3 completed the lap with zero off-track events and 100% of steps with all wheels on track.
 
+![Run 3 lap trace on reinvent_base](images/run3_lap_plot.png)
+
 The primary limitation is latency. At ~15–19 seconds per decision step, a single lap takes roughly an hour of wall-clock time. The simulator pauses physics during inference, making this a demonstration of capability rather than a practical real-time controller.
 
 ---
